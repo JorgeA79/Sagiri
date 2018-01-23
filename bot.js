@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const ayy = client.emojis.get("405155342402584586");
+const ayy = client.emojis.get("362976226350071810");
 
 client.on('ready',() => {
 	   client.user.setPresence({game: {name: "to Draw | s!help", type: 0}});
