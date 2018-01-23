@@ -57,7 +57,7 @@ client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'flip')) {
 		
-	var flipresult = Math.floor((Math.random() * 2) + 1);
+	
 		
     		message.channel.send(`The coin landed on heads`);
 
