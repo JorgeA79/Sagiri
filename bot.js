@@ -110,7 +110,7 @@ client.on('message', message => {
 		var username = message.author.username
 		var avatar = message.author.avatarURL
 		const embed = new Discord.RichEmbed()
-  .setTitle(username)
+
   .setAuthor(username, avatar)
   .setColor(0x7AFFA8)
   
