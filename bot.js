@@ -122,13 +122,14 @@ client.on('message', message => {
   
   .setThumbnail(avatar)
 
-  .addField("Main Commands",
-    "\`help\`,\`ping\`,\`invite\`")
+
 
   .addField(":star:Levels", levels + " (" + experience + "xp)", true)
 
   .addField(":dollar:Credits", "$" + balance , true)
 
+  .addField(":yellow_heart:Reputation",
+    reputation)		
   message.channel.send({embed});
 		
 		 
