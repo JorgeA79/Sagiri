@@ -33,9 +33,23 @@ client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'help')) {
 		
-	
-	message.author.send(`${message.author.username} you seem a bit confused here you can have our commands:\n Normal Commands:\n  -help\n  -ping\n  -invite\n Fun Commands:\n  -8ball\n  -flip head or tail`);
-	message.channel.send(`${message.author.username} i sent you a message that will help you a bit :mailbox_with_mail:`)
+	const embed = new Discord.RichEmbed()
+  .setTitle("Sagiri's Commands")
+  .setAuthor("Sagiri", "https://cdn.discordapp.com/attachments/405118984451653633/405149148002648065/DEUtpOVWsAEzzri.png")
+   .setColor(0x7AFFA8)
+  .setDescription("Here you can find the main commands of the bot so you wont get confused")
+  .setFooter("This is the footer text, it can hold 2048 characters", "http://i.imgur.com/w1vhFSR.png")
+  .setImage("http://i.imgur.com/yVpymuV.png")
+.setThumbnail("https://cdn.discordapp.com/attachments/405118984451653633/405149226604167179/91380.png")
+
+  .addField("Main Commands",
+    "\`help\`,\`ping\`,\`invite\`")
+
+  .addField("Fun Commands", "\`8ball\`, \`flip\` \`coin\` or \`tail\`", true)
+
+
+  message.author.send({embed});
+message.channel.send(`${message.author.username} i sent you a message that will help you a bit :mailbox_with_mail:`)
 		
 	}
 });
