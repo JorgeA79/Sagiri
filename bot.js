@@ -125,7 +125,7 @@ client.on('message', message => {
   .addField("Main Commands",
     "\`help\`,\`ping\`,\`invite\`")
 
-  .addField(":small_orange_diamond:Levels", levels + "(${experience}xp)", true)
+  .addField(":small_orange_diamond:Levels", levels + "(" + experience + "xp)", true)
 	.addBlankField(true)
   .addField("Anime Commands", "\`fact pokemon\`, \`fact db\`", true)
 
