@@ -22,7 +22,7 @@ client.on('message', message => {
 	if (message.content.startsWith(prefix + 'emote')) {
 	
 	
-message.react("362976226350071810")
+message.react("405159875128066048")
 		
 	}
 });
