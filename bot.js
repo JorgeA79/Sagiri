@@ -7,7 +7,7 @@ client.on('ready',() => {
 });
 
 var prefix = "s!"
-
+//Normal Commands
 client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'help')) {
@@ -52,6 +52,28 @@ client.on('message', message => {
 		 
 	}
 		
+});
+//MiniGames
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'flip')) {
+		
+	 	var result = Math.floor((Math.random() * 2) + 1);
+    	if (result == 1) {
+    		
+    	} else if (result == 2) {
+    		const embed = new Discord.RichEmbed()
+
+  .setTitle("AAAAH KAAAAIOKEEN")
+
+  .setColor(0x01DFD7)
+  .setImage("https://media.giphy.com/media/3osBLqfVbQI0fx0oLe/giphy.gif")
+
+
+  message.channel.send({embed});
+    	}
+		
+	}
 });
 //Important
 client.login(process.env.BOT_TOKEN);
