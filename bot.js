@@ -57,14 +57,10 @@ client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'flip')) {
 		
-	
-	var result = Math.floor((Math.random() * 2) + 1);
-    	if (result == 1) {
+	var flipresult = Math.floor((Math.random() * 2) + 1);
+		
     		message.channel.send(`The coin landed on heads`);
-    	} 
-	if (result == 2) {
-    		message.channel.send(`The coin landed on tails`);
-    	}
+
 	}
 });
 
