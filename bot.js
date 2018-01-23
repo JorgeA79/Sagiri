@@ -56,7 +56,7 @@ client.on('message', message => {
 //MiniGames
 client.on('message', message => {
 	if (message.author === client.user) return;
-	if (message.content.startsWith(prefix + 'flip')) {
+	if (message.content.startsWith(prefix + 'flip head')) {
 		
 	 	var result = Math.floor((Math.random() * 2) + 1);
     	if (result == 1) {
@@ -69,6 +69,7 @@ client.on('message', message => {
 
 
   message.channel.send({embed});
+		 message.channel.send(`You got me <:anime:405162482370347019>`);
     	} else if (result == 2) {
     		const embed = new Discord.RichEmbed()
 
@@ -76,9 +77,42 @@ client.on('message', message => {
 
   .setColor(0x7AFFA8)
   .setImage("https://68.media.tumblr.com/4c0e4d4f186433f84ad11109f0b619b2/tumblr_np6oolnI2c1td4t64o1_500.gif")
+		
+
+  message.channel.send({embed});
+		 message.channel.send(`WOOOOOOOOOOO <:smug_maeve:405166781976674304>`);
+    	}
+		
+	}
+});
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'flip tail')) {
+		
+	 	var result = Math.floor((Math.random() * 2) + 1);
+    	if (result == 1) {
+    		const embed = new Discord.RichEmbed()
+
+  .setTitle("Head")
+
+  .setColor(0x7AFFA8)
+  .setImage("https://68.media.tumblr.com/4c0e4d4f186433f84ad11109f0b619b2/tumblr_np6oolnI2c1td4t64o1_500.gif")
 
 
   message.channel.send({embed});
+		 message.channel.send(`WOOOOOOOOOOO <:smug_maeve:405166781976674304>`);
+    	} else if (result == 2) {
+    		const embed = new Discord.RichEmbed()
+
+  .setTitle("Tail")
+
+  .setColor(0x7AFFA8)
+  .setImage("https://68.media.tumblr.com/4c0e4d4f186433f84ad11109f0b619b2/tumblr_np6oolnI2c1td4t64o1_500.gif")
+		
+
+  message.channel.send({embed});
+		
+		 message.channel.send(`You got me <:anime:405162482370347019>`);
     	}
 		
 	}
