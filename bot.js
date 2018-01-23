@@ -51,7 +51,22 @@ client.on('message', message => {
 		
 		 
 	}
+		
 });
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'flip')) {
+		
+	
+	var result = Math.floor((Math.random() * 2) + 1);
+    	if (result == 1) {
+    		bot.reply(message, "The coin landed on heads");
+    	} else if (result == 2) {
+    		bot.reply(message, "The coin landed on tails");
+    	}
+	}
+});
+
 //Important
 client.login(process.env.BOT_TOKEN);
 
