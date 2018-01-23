@@ -108,13 +108,13 @@ client.on('message', message => {
 	if (message.content.startsWith(prefix + 'profile')) {
 
 		var username = message.author.username
-		
+		var avatar = message.author.avatarURL
 		const embed = new Discord.RichEmbed()
   .setTitle(username)
-
+  .setAuthor(username, avatar)
   .setColor(0x7AFFA8)
   
-  .setThumbnail(message.author.avatarURL)
+  .setThumbnail(avatar)
 
 
 
