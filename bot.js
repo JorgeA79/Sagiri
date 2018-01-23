@@ -7,6 +7,12 @@ client.on('ready',() => {
 });
 
 var prefix = "s!"
+
+var levels = 1
+var balance = 0
+var reputation = 0
+var experience = 0
+
 var answers = 
     			["It is certain",
 			"It is decidedly so",
@@ -116,7 +122,12 @@ client.on('message', message => {
   
   .setThumbnail(avatar)
 
+  .addField("Main Commands",
+    "\`help\`,\`ping\`,\`invite\`")
 
+  .addField(":small_orange_diamond:Levels", levels + "(${experience}xp)", true)
+	.addBlankField(true)
+  .addField("Anime Commands", "\`fact pokemon\`, \`fact db\`", true)
 
   message.channel.send({embed});
 		
