@@ -26,7 +26,21 @@ client.on('message', message => {
 		 message.channel.send(`:ping_pong: Pong! \nTime taken: \`${Date.now() - message.createdTimestamp} ms\``);
 	}
 });
-
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'flip')) {
+		
+	
+	 	var result = Math.floor((Math.random() * 2) + 1);
+    	if (result == 1) {
+    		message.channel.send(`head`)
+    	} else if (result == 2) {
+    		message.channel.send(`tail`)
+    	}
+	
+		
+	}
+});
 client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'invite')) {
