@@ -38,8 +38,6 @@ client.on('message', message => {
   .setAuthor("Sagiri", "https://cdn.discordapp.com/attachments/405118984451653633/405149148002648065/DEUtpOVWsAEzzri.png")
    .setColor(0x7AFFA8)
   .setDescription("Here you can find the main commands of the bot so you wont get confused")
-  .setFooter("This is the footer text, it can hold 2048 characters", "http://i.imgur.com/w1vhFSR.png")
-  .setImage("http://i.imgur.com/yVpymuV.png")
 .setThumbnail("https://cdn.discordapp.com/attachments/405118984451653633/405149226604167179/91380.png")
 
   .addField("Main Commands",
