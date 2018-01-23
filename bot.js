@@ -62,7 +62,7 @@ client.on('message', message => {
     	if (result == 1) {
     		const embed = new Discord.RichEmbed()
 
-  .setTitle(">Head<")
+  .setTitle("Head")
 
   .setColor(0x7AFFA8)
   .setImage("https://68.media.tumblr.com/4c0e4d4f186433f84ad11109f0b619b2/tumblr_np6oolnI2c1td4t64o1_500.gif")
@@ -72,7 +72,7 @@ client.on('message', message => {
     	} else if (result == 2) {
     		const embed = new Discord.RichEmbed()
 
-  .setTitle(">Tail<")
+  .setTitle("Tail")
 
   .setColor(0x7AFFA8)
   .setImage("https://68.media.tumblr.com/4c0e4d4f186433f84ad11109f0b619b2/tumblr_np6oolnI2c1td4t64o1_500.gif")
