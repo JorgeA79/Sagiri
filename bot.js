@@ -22,7 +22,7 @@ client.on('message', message => {
 	if (message.content.startsWith(prefix + 'emote')) {
 	
 	
-	message.channel.send(ayy.toString() + `xd`);
+	message.channel.send(`${ayy}`);
 		
 	}
 });
