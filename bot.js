@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const ayy = client.emojis.get("405162482370347019");
+const animehelp = client.emojis.get("405162482370347019");
 
 client.on('ready',() => {
 	   client.user.setPresence({game: {name: "to Draw | s!help", type: 0}});
@@ -12,9 +12,10 @@ client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'help')) {
 		
-	message.react(mailbox)
+	
 	message.author.send(`${message.author.username} you need a little help with the commands, there you go:\n **-j.hello**\n **-j.dbs**\n **-j.ssj**\n **-j.ssgss**\n **-j.dex help**\n **-j.xd**\n **-j.fact**\n **-j.wait**\n **-j.ping**\n **-j.join**\n **-j.invite**`);
-	message.channel.send(`${message.author.username} i sent you a message that will help you a bit ${ayy}`)
+	message.channel.send(`${message.author.username} i sent you a message that will help you a bit ${animehelp}`)
+	message.react(:mailbox:)
 		
 	}
 });
