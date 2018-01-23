@@ -22,7 +22,7 @@ client.on('message', message => {
 	if (message.content.startsWith(prefix + 'emote')) {
 	
 	
-	message.channel.send(`${ayy}`);
+message.react("362976226350071810")
 		
 	}
 });
