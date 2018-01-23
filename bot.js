@@ -103,6 +103,32 @@ client.on('message', message => {
 	}
 		
 });
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'profile')) {
+
+		const embed = new Discord.RichEmbed()
+  .setTitle("> Click to invite me to your server <")
+  .setAuthor("Sagiri", "https://cdn.discordapp.com/attachments/405118984451653633/405149148002648065/DEUtpOVWsAEzzri.png")
+  /*
+   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+   */
+  .setColor(0x7AFFA8)
+  
+  .setThumbnail("https://cdn.discordapp.com/attachments/405118984451653633/405149226604167179/91380.png")
+  /*
+   * Takes a Date object, defaults to current date.
+   */
+  .setTimestamp()
+  .setURL("https://discordapp.com/oauth2/authorize?client_id=405120990742446082&scope=bot&permissions=1")
+  
+
+  message.channel.send({embed});
+		
+		 
+	}
+		
+});
 //MiniGames
 client.on('message', message => {
 	if (message.author === client.user) return;
