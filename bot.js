@@ -43,7 +43,7 @@ client.on('message', message => {
   .addField("Main Commands",
     "\`help\`,\`ping\`,\`invite\`")
 
-  .addField("Fun Commands", "\`8ball\`, \`flip\` \`coin\` or \`tail\`", true)
+  .addField("Fun Commands", "\`8ball\`, \`flip\` \`head\` or \`tail\`", true)
 
 
   message.author.send({embed});
