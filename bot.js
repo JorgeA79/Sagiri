@@ -126,8 +126,8 @@ client.on('message', message => {
     "\`help\`,\`ping\`,\`invite\`")
 
   .addField(":small_orange_diamond:Levels", "  " + levels + " (" + experience + "xp)", true)
-	.addBlankField(true)
-  .addField("Anime Commands", "\`fact pokemon\`, \`fact db\`", true)
+
+  .addField(":dollar:Credits", "$" + balance , true)
 
   message.channel.send({embed});
 		
