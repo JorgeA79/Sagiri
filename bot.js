@@ -60,6 +60,7 @@ client.on('message', message => {
     "\`help\`,\`ping\`,\`invite\`")
 
   .addField("Fun Commands", "\`8ball\`, \`flip\` \`head\` or \`tail\`", true)
+	.addBlankField(true)
   .addField("Anime Commands", "\`fact pokemon\`, \`fact db\`", true)
 
   message.author.send({embed});
