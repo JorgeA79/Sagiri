@@ -14,7 +14,7 @@ client.on('message', message => {
 		
 	
 	message.author.send(`${message.author.username} you need a little help with the commands, there you go:\n **-j.hello**\n **-j.dbs**\n **-j.ssj**\n **-j.ssgss**\n **-j.dex help**\n **-j.xd**\n **-j.fact**\n **-j.wait**\n **-j.ping**\n **-j.join**\n **-j.invite**`);
-	message.channel.send(`${message.author.username} i sent you a message that will help you a bit ${animehelp}`)
+	message.channel.send(`${message.author.username} i sent you a message that will help you a bit <:anime:405162482370347019>`)
 	
 		
 	}
