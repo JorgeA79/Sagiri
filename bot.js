@@ -114,7 +114,7 @@ client.on('message', message => {
 
   .setColor(0x7AFFA8)
   
-  .setThumbnail("https://cdn.discordapp.com/attachments/405118984451653633/405149226604167179/91380.png")
+  .setThumbnail(message.author.avatarURL)
 
 
 
