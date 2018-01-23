@@ -27,7 +27,7 @@ client.on('message', message => {
 client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'invite')) {
-	var selectVideo = randomVideo[Math.floor(Math.random() * randomVideo.length)];
+
 		const embed = new Discord.RichEmbed()
   .setTitle("> Click to invite me to your server <")
   .setAuthor("Sagiri", "https://cdn.discordapp.com/attachments/405118984451653633/405149148002648065/DEUtpOVWsAEzzri.png")
