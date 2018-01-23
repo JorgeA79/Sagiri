@@ -34,7 +34,7 @@ client.on('message', message => {
 	if (message.content.startsWith(prefix + 'help')) {
 		
 	
-	message.author.send(`${message.author.username} you seem a bit confused here you can have our commands:\n **-j.hello**\n **-j.dbs**\n **-j.ssj**\n **-j.ssgss**\n **-j.dex help**\n **-j.xd**\n **-j.fact**\n **-j.wait**\n **-j.ping**\n **-j.join**\n **-j.invite**`);
+	message.author.send(`\```${message.author.username} you seem a bit confused here you can have our commands:\nNormal Commands:\n -help\n -ping\n -invite\nFun Commands:\n -8ball\n -flip head or taile\````);
 	message.channel.send(`${message.author.username} i sent you a message that will help you a bit :mailbox_with_mail:`)
 		
 	}
