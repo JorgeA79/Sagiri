@@ -100,7 +100,7 @@ client.on('message', message => {
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
-  .setColor(0x7AFFA8)
+  .setColor(0x7AFFA8) 
   
   .setThumbnail("https://cdn.discordapp.com/attachments/405118984451653633/405149226604167179/91380.png")
   /*
