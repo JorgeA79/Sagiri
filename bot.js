@@ -7,7 +7,11 @@ const tableSource = new EnmapLevel({name: "LevelsTable"});
 const myTable = new Enmap({provider: tableSource});
 
 
-client.myTable = new Enmap({name: "myTable"});
+client.myTable = new Enmap({name: "LevelsTable"});
+const levelsSettings = {
+  level: 0,
+  points: 0
+}
 
 client.on('ready',() => {
 	   client.user.setPresence({game: {name: "to Draw | s!help", type: 0}});
