@@ -293,7 +293,8 @@ client.on('message', message => {
     .then(message => message.channel.send("I joined the channel successfully!"));   
 		
 		  if (!voiceChannel){
-      return message.channel.send(":x: You must be in a voice channel first!");
+      return;
+			  message.channel.send(":x: You must be in a voice channel first!");
     }
 		
 	}
