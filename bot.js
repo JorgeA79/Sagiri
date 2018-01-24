@@ -248,7 +248,7 @@ client.on("message", message => {
  
 	  message.channel.send(`You"ve leveled up to level **${curLevel}**! Ain"t that dandy?`);
   }
-	if(userData.points ==  (3*(userData.level)+3)){
+	if(userData.points ==  (32*(userData.level)+32)){
 	 userData.level =  userData.level + 1;
 	 message.channel.send(`You"ve leveled up to level **${userData.level}**! Ain"t that dandy?`);	
 	
