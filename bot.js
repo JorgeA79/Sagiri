@@ -255,12 +255,10 @@ message.channel.send("Level: " + defaultSettings.level);
 client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'setable')) {
-const thisConf = client.defaultSettings.get(message.guild.id);
-
-thisConf.level = "2";
-
-client.defaultSettings.set(message.guild.id, thisConf);
-message.channel.send("New level! ");
+		
+const thisConf = client.settings.get(message.guild.id);
+thisConf.prefix = "2";
+		client.settings.set(message.guild.id, thisConf);
 		}
 });
 //Important
