@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const sql = require("sqlite");
 sql.open("./score.sqlite");
 const Enmap = require('enmap');
-const EnmapLevel = require('enmap-level');
+
 
 
 client.on('ready',() => {
