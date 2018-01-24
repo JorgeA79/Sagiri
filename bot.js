@@ -14,10 +14,10 @@ client.on('ready',() => {
 
 var prefix = "s!"
 
-var levels = 1
-var balance = 0
-var reputation = 0
-var experience = 0
+var levels = "0"
+var balance = "0"
+var reputation = "0"
+var experience = "0"
 
 var answers = 
     			["It is certain",
@@ -237,7 +237,7 @@ client.on("message", message => {
     level: 0
   };
   let userData = points[message.author.id];
-  userData.points++;
+  userData.points+= 15;
 
   let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
   if (curLevel > userData.level) {
@@ -245,7 +245,8 @@ client.on("message", message => {
     userData.level = curLevel;
     message.reply(`You"ve leveled up to level **${curLevel}**! Ain"t that dandy?`);
   }
-
+levels = level
+experience = points
   if (message.content.startsWith(prefix + "level")) {
     message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
   }
