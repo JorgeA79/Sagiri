@@ -6,6 +6,9 @@ const EnmapLevel = require('enmap-level');
 const tableSource = new EnmapLevel({name: "LevelsTable"});
 const myTable = new Enmap({provider: tableSource});
 
+
+client.myTable = new Enmap({name: "myTable"});
+
 client.on('ready',() => {
 	   client.user.setPresence({game: {name: "to Draw | s!help", type: 0}});
 });
