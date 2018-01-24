@@ -223,7 +223,11 @@ client.on('message', message => {
 		message.channel.send(dbsfactAnswer);
 		}
 });
+sql.get(`SELECT * FROM scores WHERE userId = "${message.author.id}"`).then(row => {
 
+}).catch(() => {
+
+});
 //Important
 client.login(process.env.BOT_TOKEN);
 
