@@ -238,7 +238,7 @@ client.on("message", message => {
   };
   let userData = points[message.author.id];
   userData.points++;
-if(userData.points ==  32 + ((userData.points)*2 + 1){
+if(userData.points ==  32){
 	userData.level++;
 }
   let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
@@ -247,6 +247,9 @@ if(userData.points ==  32 + ((userData.points)*2 + 1){
     userData.level = curLevel;
     message.reply(`You"ve leveled up to level **${curLevel}**! Ain"t that dandy?`);
   }
+	if(userData.points ==  32){
+	curLevel++;
+}
 levels = userData.level
 experience = userData.points
   if (message.content.startsWith(prefix + "level")) {
