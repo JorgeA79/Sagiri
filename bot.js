@@ -245,7 +245,7 @@ client.on("message", message => {
     userData.level = curLevel;
     message.reply(`You"ve leveled up to level **${curLevel}**! Ain"t that dandy?`);
   }
-	if(userData.points ==  32){
+	if(userData.points ==  3){
 	curLevel = curLevel + 1;
 }
 levels = userData.level
