@@ -284,7 +284,20 @@ client.on('message', message => {
 
             }
         });
-
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'audio')) {
+	
+		const voiceChannel = message.author.voiceChannel;
+		voiceChannel.join()
+    .then(message => message.channel.send("I joined the channel successfully!"));   
+		
+		  if (!voiceChannel){
+      return message.channel.send(":x: You must be in a voice channel first!");
+    }
+		
+	}
+});
 //Important
 client.login(process.env.BOT_TOKEN);
 
