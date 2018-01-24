@@ -252,7 +252,7 @@ const setest = client.settings.get(message.guild.id);
 
 setest.level = "2";
 
-client.settings.set(message.guild.id, thisConf);
+client.settings.set(message.guild.id, setest);
 		}
 });
 
