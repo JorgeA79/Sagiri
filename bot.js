@@ -229,6 +229,12 @@ client.on('message', message => {
 		message.channel.send(dbsfactAnswer);
 		}
 });
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'fact db')) {
+		message.channel.send(`You have ${scorePoints} points!`);
+		}
+});
 
 //Important
 client.login(process.env.BOT_TOKEN);
