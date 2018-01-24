@@ -15,6 +15,8 @@ client.on('ready',() => {
 var prefix = "s!"
 
 var levels = "0"
+var levelsequ = "0"
+var nextlevel = "0"
 var balance = "0"
 var reputation = "0"
 var experience = "0"
@@ -130,7 +132,7 @@ client.on('message', message => {
 
 
 
-  .addField(":star:Levels", levels + " (" + experience + " xp)", true)
+  .addField(":star:Levels", levels + " (" + experience + " xp/ " + levelsequ + " xp for level " + nextlevel + "", true)
 
   .addField(":dollar:Credits", "$" + balance , true)
 
@@ -241,6 +243,8 @@ client.on("message", message => {
   var totalxp = 0;
   var curLevel = 0;
 	
+	levelsequ = (32*(userData.level)+32);
+	nextlevel = userData.level + 1;
 	
   if (curLevel > userData.level) {
     // Level up!
