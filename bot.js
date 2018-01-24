@@ -12,6 +12,7 @@ var con = mysql.createConnection{(
 con.connect(err => {
 	if(err) throw err;
 	console.log("Conncted to database");
+});
 //xp end
 client.on('ready',() => {
 	   client.user.setPresence({game: {name: "to Draw | s!help", type: 0}});
