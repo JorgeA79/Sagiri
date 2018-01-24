@@ -229,7 +229,7 @@ client.on('message', message => {
 		}
 });
 client.on("message", message => {
-  if (!message.content.startsWith(prefix)) return;
+
   if (message.author.bot) return;
 
   if (!points[message.author.id]) points[message.author.id] = {
