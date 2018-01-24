@@ -4,7 +4,8 @@ const Enmap = require('enmap');
 const EnmapLevel = require('enmap-level');
 
 //Levels system
-
+const pointProvider = new EnmapLevel({name: "points"});
+this.points = new Enmap({provider: pointProvider});
 //end of level system
 
 
