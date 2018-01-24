@@ -254,6 +254,7 @@ client.on("message", message => {
   }
 	if(userData.points ==  (32*(userData.level)+32)){
 	 userData.level =  userData.level + 1;
+		userData.points++;
 	 message.channel.send(message.author.toString() + `, You"ve leveled up to level **${userData.level}**! Ayy you are growing <:smug_maeve:405166781976674304>`);	
 	
 }
