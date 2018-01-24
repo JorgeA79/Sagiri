@@ -130,7 +130,7 @@ client.on('message', message => {
 
 
 
-  .addField(":star:Levels", "${levels}(${experience)", true)
+  .addField(":star:Levels", levels + "(" + experience + ")", true)
 
   .addField(":dollar:Credits", "$" + balance , true)
 
