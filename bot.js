@@ -71,7 +71,7 @@ client.on('message', message => {
 .setThumbnail("https://cdn.discordapp.com/attachments/405118984451653633/405149226604167179/91380.png")
 
   .addField("Main Commands",
-    "\`help\`,\`ping\`,\`invite\,\`profile\`")
+    "\`help\`,\`ping\`,\`invite\`,\`profile\`")
 
   .addField("Fun Commands", "\`8ball\`, \`flip\` \`head\` or \`tail\`", true)
   .addField("Anime Commands", "\`fact pokemon\`, \`fact db\`", true)
