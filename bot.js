@@ -2,11 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const mysql = require('mysql');
 
-//Levels system
-const pointProvider = new EnmapLevel({name: "points"});
-this.points = new Enmap({provider: pointProvider});
-//end of level system
-
 
 client.on('ready',() => {
 	   client.user.setPresence({game: {name: "to Draw | s!help", type: 0}});
