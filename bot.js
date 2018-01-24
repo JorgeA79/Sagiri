@@ -3,12 +3,7 @@ const client = new Discord.Client();
 const mysql = require('mysql');
 
 //Xp system
-var con = mysql.createConnection{(
-	host: "localhost",
-	user: "root",
-	password: "123",
-	database: "sadb"
-	});
+
 
 //xp end
 client.on('ready',() => {
