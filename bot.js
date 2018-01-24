@@ -239,7 +239,7 @@ client.on("message", message => {
   let userData = points[message.author.id];
   userData.points++;
 
-  var curLevel = 0;
+  var curLevel = userData.level;
   if (curLevel > userData.level) {
     // Level up!
     userData.level = curLevel;
