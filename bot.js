@@ -2,7 +2,17 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const mysql = require('mysql');
 
-
+//Xp system
+var con = mysql.createConnection{(
+	host: "localhost",
+	user: "root",
+	password: "123",
+	database: "sadb"
+	});
+con.connect(err => {
+	if(err) throw err;
+	console.log("Conncted to database");
+//xp end
 client.on('ready',() => {
 	   client.user.setPresence({game: {name: "to Draw | s!help", type: 0}});
 });
