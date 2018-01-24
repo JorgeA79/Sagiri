@@ -242,22 +242,6 @@ client.on('message', message => {
     });
   });
 
-  if (!message.content.startsWith(prefix)) return;
-
-  if (message.content.startsWith(prefix + "level")) {
-    sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
-      if (!row) return message.reply("Your current level is 0");
-      message.reply(`Your current level is ${row.level}`);
-    });
-  } else
-
-  if (message.content.startsWith(prefix + "points")) {
-    sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
-      if (!row) return message.reply("sadly you do not have any points yet!");
-      message.reply(`you currently have ${row.points} points, good going!`);
-    });
-  }
-});
 //Important
 client.login(process.env.BOT_TOKEN);
 
