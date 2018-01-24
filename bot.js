@@ -231,7 +231,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
 	if (message.author === client.user) return;
-	if (message.content.startsWith(prefix + 'fact db')) {
+	if (message.content.startsWith(prefix + 'level')) {
 		message.channel.send(`You have ${scorePoints} points!`);
 		}
 });
