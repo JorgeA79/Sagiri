@@ -288,7 +288,7 @@ client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'audio')) {
 	
-		const voiceChannel = message.author.voiceChannel;
+		const voiceChannel = message.member.voiceChannel;
 		voiceChannel.join()
     .then(message => message.channel.send("I joined the channel successfully!"));   
 		
