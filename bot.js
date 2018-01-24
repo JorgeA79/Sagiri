@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const music = require('discord.js-music-v11');
 const fs = require("fs");
 
 let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
@@ -278,7 +279,7 @@ experience = userData.points
 
 });
 
-
+music(client);
 //Important
 client.login(process.env.BOT_TOKEN);
 
