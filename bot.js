@@ -261,17 +261,24 @@ client.on("message", message => {
 	 message.channel.send(message.author.toString() + `, You"ve leveled up to level **${userData.level}**! Ayy you are growing <:smug_maeve:405166781976674304>`);	
 	
 }
+	
 levels = userData.level
 experience = userData.points
+	
+	
   if (message.content.startsWith(prefix + "level")) {
     message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
+	  
   }
+	
   fs.writeFile("./points.json", JSON.stringify(points), (err) => {
     if (err) console.error(err)
   });
 
 });
-
+  fs.writeFile("./points.json", JSON.stringify(points), (err) => {
+    if (err) console.error(err)
+  });
 //Important
 client.login(process.env.BOT_TOKEN);
 
