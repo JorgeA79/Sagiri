@@ -241,14 +241,14 @@ client.on("message", message => {
 if(userData.points ==  32){
 	userData.level++;
 }
-  let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
+  var curLevel = 0;
   if (curLevel > userData.level) {
     // Level up!
     userData.level = curLevel;
     message.reply(`You"ve leveled up to level **${curLevel}**! Ain"t that dandy?`);
   }
 	if(userData.points ==  32){
-	curLevel++;
+	curLevel = curLevel + 1;
 }
 levels = userData.level
 experience = userData.points
