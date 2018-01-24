@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const mysql = require('mysql');
+const fs = require("fs");
+
+let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
 
 //Xp system
 
