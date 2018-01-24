@@ -18,7 +18,7 @@ const levelsSettings = {
 }
 
 client.on("guildCreate", guild => {
-  client.settings.set(guild.id, defaultSettings);
+  client.settings.set(guild.id, levelsSettings);
 });
 
 //end of level system
