@@ -9,6 +9,7 @@
   "dependencies": {
     "discord.js": "11.1.0",
     "request": "2.81.0",
+    "enmap": "0.4.2",
     "sqlite": "2.9.1"
   }
 }
