@@ -256,9 +256,9 @@ client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'setable')) {
 		
-const thisConf = client.settings.get(message.guild.id);
+const thisConf = client.settings.get("405116880484040704");
 thisConf.prefix = "2";
-		client.settings.set(message.guild.id, thisConf);
+		client.settings.set("405116880484040704", thisConf);
 		}
 });
 //Important
