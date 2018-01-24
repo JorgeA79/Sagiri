@@ -5,21 +5,9 @@ const EnmapLevel = require('enmap-level');
 
 //Levels system
 
-const tableSource = new EnmapLevel({name: "LevelsTable"});
-const myTable = new Enmap({provider: tableSource});
 
-
-client.myTable = new Enmap({name: "LevelsTable"});
-
-client.settings = new Enmap({name: 'settings', persistent: true});
-const levelsSettings = {
-  level: "0",
-  points: "0"
-}
-
-client.on("guildCreate", guild => {
-  client.settings.set(guild.id, levelsSettings);
-});
+const pointProvider = new EnmapLevel({name: "points"});
+this.points = new Enmap({provider: pointProvider});
 
 //end of level system
 
@@ -244,25 +232,7 @@ client.on('message', message => {
 		message.channel.send(dbsfactAnswer);
 		}
 });
-client.on('message', message => {
-	if (message.author === client.user) return;
-	if (message.content.startsWith(prefix + 'setable')) {
-		
-const setest = client.settings.get(message.guild.id);
 
-setest.level = "2";
-
-client.settings.set(message.guild.id, setest);
-		}
-});
-
-client.on('message', message => {
-	if (message.author === client.user) return;
-	if (message.content.startsWith(prefix + 'getable')) {
-		
-message.channel.send(levelsSettings.level);
-		}
-});
 //Important
 client.login(process.env.BOT_TOKEN);
 
