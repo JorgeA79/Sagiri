@@ -248,7 +248,8 @@ client.on("message", message => {
 	  message.channel.send(`You"ve leveled up to level **${curLevel}**! Ain"t that dandy?`);
   }
 	if(userData.points ==  3){
-	curLevel = curLevel + 1;
+	 userData.level =  userData.level + 1;
+	 message.channel.send(`You"ve leveled up to level **${userData.level}**! Ain"t that dandy?`);	
 }
 levels = userData.level
 experience = userData.points
