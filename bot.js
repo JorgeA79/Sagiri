@@ -245,8 +245,8 @@ client.on("message", message => {
     userData.level = curLevel;
     message.reply(`You"ve leveled up to level **${curLevel}**! Ain"t that dandy?`);
   }
-levels = level
-experience = points
+levels = userData.level
+experience = userData.points
   if (message.content.startsWith(prefix + "level")) {
     message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
   }
