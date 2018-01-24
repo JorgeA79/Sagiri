@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const Enmap = require('enmap');
-const EnmapLevel = require('enmap-level');
+const mysql = require('mysql');
 
 //Levels system
 const pointProvider = new EnmapLevel({name: "points"});
