@@ -276,9 +276,7 @@ experience = userData.points
   });
 
 });
-  fs.writeFile("./points.json", JSON.stringify(points), (err) => {
-    if (err) console.error(err)
-  });
+
 //Important
 client.login(process.env.BOT_TOKEN);
 
