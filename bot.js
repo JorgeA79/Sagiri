@@ -280,6 +280,29 @@ experience = userData.points
 
 });
 
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'play')) {
+	
+		 if(!args[0]) return message.channel.send("Please send a link/name..."); //Makes sure that theres a name/link
+    if(!message.member.voiceChannel) return message.reply("Please join a voice channel first!"); //Makes sure it can join a voice chat with that person
+    if(!servers[message.guild.id]) servers[message.guild.id] ={ //makes sure that there is a queue value for that server
+      queue: []
+    }
+    var server = servers[message.guild.id]
+    if(args[0].startsWith("http")){ //checks if its a link or not
+      message.reply("Adding "+args[0]);
+      server.queue.push(args[0]);
+    } else{ //searches for it with the api if a name
+      message.reply("Adding "+(message.content.slice(6)));
+      searchfunc(message)
+    }
+    if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){ //joins the vc
+      play(connection, message); 
+    })
+  }
+
+});
 
 
 //Important
