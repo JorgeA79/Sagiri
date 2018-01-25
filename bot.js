@@ -376,6 +376,14 @@ client.on('message', message => {
 	}
 	});
 
+client.on('message', message => {
+	if (message.author === client.user) return;
+
+	if (message.content.startsWith(prefix + 'top play 1')) {
+	message.channel.sendMessage("s!play https://www.youtube.com/watch?v=2ZoBxSJrcJI&list=RD2ZoBxSJrcJI");
+	}
+	});
+
 //Important
 client.login(process.env.BOT_TOKEN);
 
