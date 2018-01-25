@@ -285,6 +285,18 @@ experience = userData.points
 
 
 
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'join')) {
+		
+	  if (message.member.voiceChannel) {
+      const connection = await message.member.voiceChannel.join();
+    } else {
+      message.reply('You need to join a voice channel first!');
+    }
+  }
+});
+
 //Important
 client.login(process.env.BOT_TOKEN);
 
