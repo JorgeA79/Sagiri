@@ -15,6 +15,8 @@ let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
 //xp end
 client.on('ready',() => {
 	   client.user.setPresence({game: {name: "to Draw | s!help", type: 0}});
+	  var voiceChannel = bot.channels.filter(g => {
+    return g.type == 'voice' && g.name == 'General';
 });
 
 var prefix = "s!"
