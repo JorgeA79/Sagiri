@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const yt = require('ytdl-core');
 const opus = require('node-opus');
 const ffmpeg = require('ffmpeg');
+const playArbitraryFFmpeg = require('discord.js-arbitrary-ffmpeg');
 
 const fs = require("fs");
 
