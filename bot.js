@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const yt = require('ytdl-core');
 const opus = require('node-opus');
+const ffmpeg = require('ffmpeg');
 
 const fs = require("fs");
 
