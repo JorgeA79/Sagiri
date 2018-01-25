@@ -6,6 +6,7 @@ const opus = require('node-opus');
 
 const fs = require("fs");
 
+
 let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
 
 //Xp system
