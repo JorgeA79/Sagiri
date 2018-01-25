@@ -393,14 +393,7 @@ client.on('message', message => {
 		message.channel.sendMessage(":white_check_mark: **Disconnected!**");
 	}
 	});
-		client.on('message', message => {
-	if (message.author === client.user) return;
-	if (message.content.startsWith(prefix + 'save')) {
-		  fs.writeFile("./points.json", JSON.stringify(points), (err) => {
-    if (err) console.error(err)
-  });
-	}
-	});
+
 
 //Important
 client.login(process.env.BOT_TOKEN);
