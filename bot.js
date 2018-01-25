@@ -368,6 +368,13 @@ client.on('message', message => {
 	}
 	});
 
+client.on('message', message => {
+	if (message.author === client.user) return;
+
+	if (message.content.startsWith(prefix + 'topsongs')) {
+	message.channel.sendMessage("\```Best Songs\n 1.Dragon Ball Song\n 2.IDK Song\n 3.xD Song\n\```");
+	}
+	});
 
 //Important
 client.login(process.env.BOT_TOKEN);
