@@ -380,7 +380,27 @@ client.on('message', message => {
 	if (message.author === client.user) return;
 
 	if (message.content.startsWith(prefix + 'top play 1')) {
-	message.channel.sendMessage("s!play https://www.youtube.com/watch?v=2ZoBxSJrcJI&list=RD2ZoBxSJrcJI");
+	
+		  const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel){
+      return message.channel.sendMessage(":x: You are not in a voice channel!!");
+    }
+	message.channel.sendMessage(":white_check_mark: **Connected!**");
+    voiceChannel.join()
+    .then(connection => {
+	const args = "https://www.youtube.com/watch?v=2ZoBxSJrcJI&list=RD2ZoBxSJrcJI&index=1";
+      let stream = yt(args, {audioonly: true});
+      yt.getInfo(args, function(err, info) {
+      const title = info.title
+	  message.channel.sendMessage(`Now playing \`${title}\``)
+      })
+      const dispatcher = connection.playStream(stream);
+      dispatcher.on('end', () => {
+         voiceChannel.leave();
+       }).catch(e =>{
+         console.error(e);
+       });
+    })
 	}
 	});
 
