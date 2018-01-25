@@ -293,21 +293,14 @@ client.on('message', message => {
     }
 	message.channel.sendMessage(":white_check_mark: **Connected!**");
     voiceChannel.join()
-    .then(connection => {
-	const args = message.content.split(" ").slice(1);
-      let stream = yt(args.join(" "), {audioonly: true});
-      yt.getInfo(args.join(" "), function(err, info) {
-      const title = info.title
-	  message.channel.sendMessage(`Now playing \`${title}\``)
-      })
-      const dispatcher = connection.playStream(stream);
-      dispatcher.on('end', () => {
-         voiceChannel.leave();
-       }).catch(e =>{
-         console.error(e);
-       });
-    })
-  }
+	.then(connection => {
+  return connection.playFile('./xd.mp3');
+ })
+.then(dispatcher => {
+  dispatcher.on('error', console.error);
+  // You can also do things like dispatcher.pause() and dispatcher.end() here.
+})
+.catch(console.error);
 });
 
 //Important
