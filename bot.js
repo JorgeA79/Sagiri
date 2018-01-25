@@ -27,6 +27,27 @@ var balance = "0"
 var reputation = "0"
 var experience = "0"
 
+var pokemons = 
+    			["It is certain",
+			"It is decidedly so",
+			"Without a doubt",
+			"Yes, definitely",
+			"You may rely on it",
+			"As I see it, yes",
+			"Most likely",
+			"Outlook good",
+			"Yes",
+			"Signs point to yes",
+			"Reply hazy try again",
+			"Ask again later",
+			"Better not tell you now",
+			"Cannot predict now",
+			"Concentrate and ask again",
+			"Don't count on it",
+			"My reply is no",
+			"My sources say no",
+			"Outlook not so good",
+			"Very doubtful"];
 var answers = 
     			["It is certain",
 			"It is decidedly so",
@@ -248,6 +269,12 @@ client.on('message', message => {
 		message.channel.send(r8ballAnswer);
 	}
 });
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'pokemon')) {
+	message.channel.send(`You got a ` + );
+	}
+});
 //Anime Commands
 client.on('message', message => {
 	if (message.author === client.user) return;
@@ -263,6 +290,8 @@ client.on('message', message => {
 		message.channel.send(dbsfactAnswer);
 		}
 });
+
+//Level System
 client.on("message", message => {
 
   if (message.author.bot) return;
@@ -280,7 +309,7 @@ client.on("message", message => {
 	nextlevel = userData.level + 1;
 	
   if (curLevel > userData.level) {
-    // Level up!
+    
     userData.level = curLevel;
  
 	  message.channel.send(`You"ve leveled up to level **${curLevel}**! Ain"t that dandy?`);
@@ -311,6 +340,8 @@ experience = userData.points
 
 });
 
+
+//Music System
 client.on('message', message => {
 	if (message.author === client.user) return;
 	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
@@ -362,6 +393,15 @@ client.on('message', message => {
 		message.channel.sendMessage(":white_check_mark: **Disconnected!**");
 	}
 	});
+		client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'save')) {
+		  fs.writeFile("./points.json", JSON.stringify(points), (err) => {
+    if (err) console.error(err)
+  });
+	}
+	});
+
 //Important
 client.login(process.env.BOT_TOKEN);
 
