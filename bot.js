@@ -77,7 +77,7 @@ client.on('message', message => {
 .setThumbnail("https://cdn.discordapp.com/attachments/405118984451653633/405149226604167179/91380.png")
 
   .addField("Main Commands",
-    "\`help\`,\`ping\`,\`invite\`,\`join\`,\`profile\`,\`level\`")
+    "\`help\`,\`ping\`,\`invite\`,\`server\`,\`profile\`,\`level\`")
 
   .addField("Fun Commands", "\`8ball\`, \`flip\` \`head\` or \`tail\`", true)
   .addField("Anime Commands", "\`fact pokemon\`, \`fact db\`", true)
@@ -125,7 +125,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
 	if (message.author === client.user) return;
-	if (message.content.startsWith(prefix + 'join')) {
+	if (message.content.startsWith(prefix + 'server')) {
 
 		const embed = new Discord.RichEmbed()
   .setTitle("> Click to join our server <")
