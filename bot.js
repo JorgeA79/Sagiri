@@ -1,13 +1,37 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const yt = require('ytdl-core');
+const search = require('youtube-search');
+const opus = require('node-opus');
 
 const fs = require("fs");
 
 let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
 
 //Xp system
-
+function play(connection, message){
+  var server = servers[message.guild.id];
+  server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
+  server.queue.shift();
+  server.dispatcher.on("end", function(){
+    if(server.queue[0]) play(connection, message);
+    else connection.disconnect();
+    message.channel.send("Song Finished...")
+  });
+}
+function searchfunc(message){
+  var server = servers[message.guild.id];
+  let opts = {
+    key: "KeyHere",
+  }
+  let args = message.content.slice(6)
+  let name = args
+  console.log(name)
+  search(name, opts, (err, results) => {
+      if(err) return console.log(err);
+      server.queue.push(results[0].link);
+    })
+};
 
 //xp end
 client.on('ready',() => {
