@@ -312,8 +312,30 @@ client.on('message', message => {
     })
 	}
 });
-
-
+client.on('message', message => {
+	if (message.author === client.user) return;
+	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
+	if (message.content.startsWith(prefix + 'join')) {
+	
+		  const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel){
+      return message.channel.sendMessage(":x: You are not in a voice channel!!");
+    }
+	message.channel.sendMessage(":white_check_mark: **Connected!**");
+    voiceChannel.join()
+		
+	}
+	});
+client.on('message', message => {
+	if (message.author === client.user) return;
+	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
+	if (message.content.startsWith(prefix + 'leave')) {
+	
+		  const voiceChannel = message.member.voiceChannel;
+     voiceChannel.leave();
+		message.channel.sendMessage(":white_check_mark: **Disconnected!**");
+	}
+	});
 //Important
 client.login(process.env.BOT_TOKEN);
 
