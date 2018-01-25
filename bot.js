@@ -280,28 +280,7 @@ experience = userData.points
 
 });
 
-client.on('message', message => {
-	if (message.author === client.user) return;
-	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM."); // prevent commands via dm
-	if (message.content.startsWith(prefix + 'play')) 
-	
-{
-		
-    const voiceChannel = message.member.voiceChannel;
-    if (!voiceChannel){
-      return message.channel.sendMessage(":x: You are not in a voice channel!!");
-    }
-	message.channel.sendMessage(":white_check_mark: **Connected!**");
-    voiceChannel.join()
-	.then(connection => {
-  return connection.playFile('./xd.mp3');
- })
-.then(dispatcher => {
-  dispatcher.on('error', console.error);
-  // You can also do things like dispatcher.pause() and dispatcher.end() here.
-})
-.catch(console.error);
-});
+
 
 //Important
 client.login(process.env.BOT_TOKEN);
