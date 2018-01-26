@@ -192,7 +192,7 @@ client.on('message', message => {
 
 		
 		var selecthugGif = hugifs[Math.floor(Math.random() * hugifs.length)];
-		  message.channel.send(`**${message.author.username}** hugged **xd**`);
+		  message.channel.send(`**${message.author.username}** hugged **${member.user.username}**`);
 		const embed = new Discord.RichEmbed()
 
   .setImage(selecthugGif)
