@@ -189,6 +189,8 @@ client.on('message', message => {
 client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'hug')) {
+		 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
+		
   	let member = message.mentions.members.first();
 		
 		var selecthugGif = hugifs[Math.floor(Math.random() * hugifs.length)];
@@ -403,6 +405,7 @@ client.on('message', message => {
 	if (message.author === client.user) return;
 
 	if (message.content.startsWith(prefix + 'topplay')) {
+		
 	   	let text = args.slice(1).join(" ");
 		
 		  const voiceChannel = message.member.voiceChannel;
