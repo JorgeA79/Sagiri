@@ -607,25 +607,7 @@ client.on('message', message => {
 	}
 	});
 //Moderation Commands
-client.on('message', message => {
-	if (message.author === client.user) return;
 
-	if (message.content.startsWith(prefix + 'purge')) {
-		
-	 
-		 const deleteCount = parseInt(args[0], 10);
-    
-    // Ooooh nice, combined conditions. <3
-    if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-      return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
-    
-    // So we get our messages, and delete them. Simple enough, right?
-    const fetched = await message.channel.fetchMessages({count: deleteCount});
-    message.channel.bulkDelete(fetched)
-      .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
-
-	}
-	});
   
 //Important
 client.login(process.env.BOT_TOKEN);
