@@ -389,7 +389,7 @@ client.on('message', message => {
     voiceChannel.join()
     .then(connection => {
 	const args = "https://www.youtube.com/watch?v=XMXgHfHxKVM";
-	    if(songnumber == "2"){
+	    if(songnumber === "2"){
 		args = "https://www.youtube.com/watch?v=Ii7jSGxDwPM";    
 	    }
       let stream = yt(args, {audioonly: true});
