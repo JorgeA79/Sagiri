@@ -213,7 +213,8 @@ client.on('message', message => {
 		
 		
   	let member = message.mentions.members.first();
-		
+		 if(!member) 
+		return message.reply("Try mentioning the person");	 
 		var selecthugGif = hugifs[Math.floor(Math.random() * hugifs.length)];
 		  message.channel.send(`**${message.author.username}** hugged **${member.user.username}**`);
 		const embed = new Discord.RichEmbed()
@@ -229,6 +230,8 @@ client.on('message', message => {
 		
 		
   	let member = message.mentions.members.first();
+		 if(!member) 
+		return message.reply("Try mentioning the person");
 		
 		var selectslapGif = slapgifs[Math.floor(Math.random() * slapgifs.length)];
 		  message.channel.send(`**${message.author.username}** slapped **${member.user.username}**`);
@@ -245,6 +248,8 @@ client.on('message', message => {
 		
 		
   	let member = message.mentions.members.first();
+		 if(!member) 
+		return message.reply("Try mentioning the person");
 		
 		var selectkillGif = faintgifs[Math.floor(Math.random() * faintgifs.length)];
 		  message.channel.send(`**${member.user.username}** fainted!`);
