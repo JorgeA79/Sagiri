@@ -36,6 +36,21 @@ var hugifs =
 			"https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif",
 			"https://media1.tenor.com/images/42305118566d028969298b0459e90899/tenor.gif?itemid=5941985",
 			"https://media.giphy.com/media/jIZwY2M1Ac8tq/giphy.gif"];
+var slapgifs = 
+    			["https://vignette.wikia.nocookie.net/adventuretimewithfinnandjake/images/c/cd/Slap.gif.gif/revision/latest?cb=20130131011837",
+			"https://media1.tenor.com/images/85722c3e51d390e11a0493696f32fb69/tenor.gif?itemid=5463215",
+			"https://media.giphy.com/media/jLeyZWgtwgr2U/giphy.gif",
+			"http://img.photobucket.com/albums/v639/aoie_emesai/100handslap.gif",
+			"https://media.giphy.com/media/Zau0yrl17uzdK/giphy.gif",
+			"http://i.imgur.com/dzefPFL.gif",
+			"https://s1.favim.com/orig/140403/anime-funny-haruno-naruto-Favim.com-1603470.gif",
+			"https://gifimage.net/wp-content/uploads/2017/07/anime-slap-gif-18.gif"];
+var faintgifs = 
+    			["https://media.tenor.com/images/4a0dc871f539484411011ae8c92c5980/tenor.gif",
+			"https://media1.tenor.com/images/00e497c5f05179b90828a97f17f409a2/tenor.gif?itemid=5240290",
+			"https://pa1.narvii.com/6603/59433c5fdf798f5327f1015d605e5a736654c92d_hq.gif",
+			"https://pa1.narvii.com/6603/c0b5bf4cc24469429ea8017c5b98ca7027398a04_hq.gif",
+			"https://www.collegemagazine.com/wp-content/uploads/2016/07/tumblr_lqv1qsZVHw1qc2jhfo1_500.gif"];
 var answers = 
     			["It is certain",
 			"It is decidedly so",
@@ -203,7 +218,38 @@ client.on('message', message => {
    message.channel.send({embed});
 	}
 });
+client.on('message', message => {
+	if (message.author === client.user) return;
+	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
+	if (message.content.startsWith(prefix + 'slap')) {
+		
+		
+  	let member = message.mentions.members.first();
+		
+		var selectslapGif = slapgifs[Math.floor(Math.random() * slapgifs.length)];
+		  message.channel.send(`**${message.author.username}** slapped **${member.user.username}**`);
+		const embed = new Discord.RichEmbed()
 
+  .setImage(selectslapGif)
+   message.channel.send({embed});
+	}
+});
+client.on('message', message => {
+	if (message.author === client.user) return;
+	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
+	if (message.content.startsWith(prefix + 'kill')) {
+		
+		
+  	let member = message.mentions.members.first();
+		
+		var selectkillGif = faintgifs[Math.floor(Math.random() * faintgifs.length)];
+		  message.channel.send(`**${message.author.username}** slapped **${member.user.username}**`);
+		const embed = new Discord.RichEmbed()
+
+  .setImage(selectkillGif)
+   message.channel.send({embed});
+	}
+});
 //MiniGames
 client.on('message', message => {
 	if (message.author === client.user) return;
