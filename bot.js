@@ -243,7 +243,7 @@ client.on('message', message => {
   	let member = message.mentions.members.first();
 		
 		var selectkillGif = faintgifs[Math.floor(Math.random() * faintgifs.length)];
-		  message.channel.send(`**${message.author.username}** slapped **${member.user.username}**`);
+		  message.channel.send(`**${member.user.username}** fainted!`);
 		const embed = new Discord.RichEmbed()
 
   .setImage(selectkillGif)
