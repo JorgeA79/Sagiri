@@ -6,24 +6,7 @@ const ffmpeg = require('ffmpeg');
 const playArbitraryFFmpeg = require('discord.js-arbitrary-ffmpeg');
 
 
-describe('javascript-quiz-using-json', () => {
 
-  var Quiz, jsdom, quiz, version, config, state, data;
-
-  before(() => {
-
-    jsdom = require('jsdom-global')();
-    Quiz = require('../src/js/quiz');
-
-    quiz = window.Quiz.__TEST__;
-    version = '0.5.1-alpha';
-
-    config = {
-      dataSource: './Quiz/data.json',
-      loadingGif: null,
-      id: 'quiz',
-      random: true
-    };
 
 
 const fs = require("fs");
