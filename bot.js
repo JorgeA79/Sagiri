@@ -74,14 +74,7 @@ var pokefacts = [
   "Did you know that Although Munna wasn't introduced until generation 5, it is actually referenced in the very first game! A woman standing outside of Rock Tunnel in Pokemon Red and Blue dreams about a chunky pink Pokemon with a floral pattern. Clearly the game makers had Munna in mind even way back then.",
 ]
 	//Normal Commands
-client.on('message', message => {
-	if (message.author === client.user) return;
-	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
-	if (message.content.startsWith(prefix)) {
-		
-		
-	}
-});
+
 client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'help')) {
@@ -208,7 +201,7 @@ client.on('message', message => {
 
   .setImage(selecthugGif)
    message.channel.send({embed});
-	}}
+	}
 });
 
 //MiniGames
