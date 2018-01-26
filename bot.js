@@ -4,7 +4,7 @@ const yt = require('ytdl-core');
 const opus = require('node-opus');
 const ffmpeg = require('ffmpeg');
 const playArbitraryFFmpeg = require('discord.js-arbitrary-ffmpeg');
-
+const pokemonGif = require('pokemon-gif');
 
 
 
@@ -336,12 +336,18 @@ client.on('message', message => {
 });
 client.on('message', message => {
 	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'pokedex')) {
+		const args = message.content.split(" ").slice(1)
+		pokemonGif(args.join(""));
+		}
+});
+client.on('message', message => {
+	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'fact db')) {
 		var dbsfactAnswer = dbsfacts[Math.floor(Math.random() * dbsfacts.length)];
 		message.channel.send(dbsfactAnswer);
 		}
 });
-
 //Level System
 client.on("message", message => {
 
