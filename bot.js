@@ -5,13 +5,25 @@ const opus = require('node-opus');
 const ffmpeg = require('ffmpeg');
 const playArbitraryFFmpeg = require('discord.js-arbitrary-ffmpeg');
 
-var configurations = {
-  id: 'SagiriQuiz',                  // the element reference within the DOM
-  dataSource: './Quiz/data.json',       // the json quiz data location
-  randomise: 'false',              // randomise the order of the questions to the user
-  loadingGif: './Quiz/loading.gif', // loading image between rendering
-};
 
+describe('javascript-quiz-using-json', () => {
+
+  var Quiz, jsdom, quiz, version, config, state, data;
+
+  before(() => {
+
+    jsdom = require('jsdom-global')();
+    Quiz = require('../src/js/quiz');
+
+    quiz = window.Quiz.__TEST__;
+    version = '0.5.1-alpha';
+
+    config = {
+      dataSource: './Quiz/data.json',
+      loadingGif: null,
+      id: 'quiz',
+      random: true
+    };
 
 
 const fs = require("fs");
