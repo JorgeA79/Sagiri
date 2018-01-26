@@ -449,7 +449,7 @@ client.on('message', message => {
 	if (message.author === client.user) return;
 
 	if (message.content.startsWith(prefix + 'topsongs')) {
-	message.channel.sendMessage("\```Best Songs\n 1.Shingeki no Kyojin 進撃の巨人 OP / Opening - Guren no Yumiya - Linked Horizon\n 2.Soul Eater resonance\n 3.Bloody Stream\n\ 4.Boku no Hero Academia OST 01 - You Say Run\n\ 5.My Hero Academia - Official Opening\n\```");
+	message.channel.sendMessage("\```Best Songs\n 1.Guren no Yumiya - Linked Horizon\n 2.Soul Eater resonance\n 3.Bloody Stream\n\ 4.Boku no Hero Academia OST 01 - You Say Run\n\ 5.My Hero Academia - Official Opening\n\```");
 	}
 	});
 
