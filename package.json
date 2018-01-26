@@ -15,7 +15,7 @@
     "node-opus": "0.2.7",
     "opusscript": "0.0.6",
     "ffmpeg-binaries": "3.2.2-3",
-    "hubot-trivia-game": "1.0.8",
+    "javascript-quiz-using-json": "0.5.1-alpha",
     "ytdl-core": "0.19.0"
   }
 }
