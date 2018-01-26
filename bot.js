@@ -27,6 +27,15 @@ var balance = "0"
 var reputation = "0"
 var experience = "0"
 
+var hugifs = 
+    			["https://media1.tenor.com/images/b0de026a12e20137a654b5e2e65e2aed/tenor.gif?itemid=7552093",
+			"https://media2.giphy.com/media/143v0Z4767T15e/giphy.gif",
+			"https://media1.tenor.com/images/506aa95bbb0a71351bcaa753eaa2a45c/tenor.gif?itemid=7552075",
+			"http://25.media.tumblr.com/tumblr_ma7l17EWnk1rq65rlo1_500.gif",
+			"http://gifimage.net/wp-content/uploads/2017/01/Anime-hug-GIF-Image-Download-1.gif",
+			"https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif",
+			"https://media1.tenor.com/images/42305118566d028969298b0459e90899/tenor.gif?itemid=5941985",
+			"https://media.giphy.com/media/jIZwY2M1Ac8tq/giphy.gif"];
 var answers = 
     			["It is certain",
 			"It is decidedly so",
@@ -181,9 +190,15 @@ client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'hug')) {
  let member = message.mentions.members.first();
-		
+		var selecthugGif = hugifs[Math.floor(Math.random() * hugifs.length)];
+		  message.channel.send(`${message.author.username} hugged member`);
+		const embed = new Discord.RichEmbed()
+
+  .setImage(selecthugGif)
+   message.channel.send({embed});
 	}
 });
+
 //MiniGames
 client.on('message', message => {
 	if (message.author === client.user) return;
