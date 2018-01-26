@@ -12,7 +12,7 @@ var configurations = {
   loadingGif: './Quiz/loading.gif', // loading image between rendering
 };
 
-Quiz.init(configurations);
+
 
 const fs = require("fs");
 
