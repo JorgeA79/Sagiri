@@ -4,6 +4,7 @@ const yt = require('ytdl-core');
 const opus = require('node-opus');
 const ffmpeg = require('ffmpeg');
 const playArbitraryFFmpeg = require('discord.js-arbitrary-ffmpeg');
+const Quiz = require('javascript-quiz-using-json');
 
 const fs = require("fs");
 
