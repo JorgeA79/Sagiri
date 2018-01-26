@@ -108,10 +108,10 @@ client.on('message', message => {
   .addField("Main Commands",
     "\`help\`,\`ping\`,\`invite\`,\`server\`,\`profile\`,\`level\`")
 
-  .addField("Fun Commands", "\`8ball\`, \`flip\` \`head\` or \`tail\`", true)
-  .addField("Anime Commands", "\`fact pokemon\`, \`fact db\`", true)
-  .addField("Audio Commands", "\`play <URL>\`,\`join\`,\`leave\`,\`topsongs\`,\`topplay <Number of the song>\`", true)
-.addField("Roleplay Commands", "\`hug\`,\`slap\`,\`kill\`", true)
+  .addField("Fun Commands", "\`8ball\`, \`flip\` \`head\` or \`tail\`")
+  .addField("Anime Commands", "\`fact pokemon\`, \`fact db\`")
+  .addField("Audio Commands", "\`play <URL>\`,\`join\`,\`leave\`,\`topsongs\`,\`topplay <Number of the song>\`")
+.addField("Roleplay Commands", "\`hug\`,\`slap\`,\`kill\`")
   message.author.send({embed});
 message.channel.send(`${message.author.username} i sent you a message that will help you a bit :mailbox_with_mail:`)
 		
