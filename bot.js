@@ -456,7 +456,7 @@ client.on('message', message => {
 client.on('message', message => {
 	if (message.author === client.user) return;
 
-	if (message.content.startsWith(prefix + 'topplay')) {
+	if (message.content.startsWith(prefix + 'topplay 1')) {
 		
 	   	let text = args.slice(1).join(" ");
 		
@@ -469,6 +469,130 @@ client.on('message', message => {
     voiceChannel.join()
     .then(connection => {
 	const args = "https://www.youtube.com/watch?v=XMXgHfHxKVM";
+	
+      let stream = yt(args, {audioonly: true});
+      yt.getInfo(args, function(err, info) {
+      const title = info.title
+	  message.channel.sendMessage(`Now playing \`${title}\``)
+      })
+      const dispatcher = connection.playStream(stream);
+      dispatcher.on('end', () => {
+         voiceChannel.leave();
+       }).catch(e =>{
+         console.error(e);
+       });
+    })
+	}
+	});
+client.on('message', message => {
+	if (message.author === client.user) return;
+
+	if (message.content.startsWith(prefix + 'topplay 2')) {
+		
+	   	let text = args.slice(1).join(" ");
+		
+		  const voiceChannel = message.member.voiceChannel;
+    	if (!voiceChannel){
+		
+      return message.channel.sendMessage(":x: You are not in a voice channel!!");
+    }
+	message.channel.sendMessage(":white_check_mark: **Connected!**");
+    voiceChannel.join()
+    .then(connection => {
+	const args = "https://www.youtube.com/watch?v=Ii7jSGxDwPM";
+	
+      let stream = yt(args, {audioonly: true});
+      yt.getInfo(args, function(err, info) {
+      const title = info.title
+	  message.channel.sendMessage(`Now playing \`${title}\``)
+      })
+      const dispatcher = connection.playStream(stream);
+      dispatcher.on('end', () => {
+         voiceChannel.leave();
+       }).catch(e =>{
+         console.error(e);
+       });
+    })
+	}
+	});
+client.on('message', message => {
+	if (message.author === client.user) return;
+
+	if (message.content.startsWith(prefix + 'topplay 3')) {
+		
+	   	let text = args.slice(1).join(" ");
+		
+		  const voiceChannel = message.member.voiceChannel;
+    	if (!voiceChannel){
+		
+      return message.channel.sendMessage(":x: You are not in a voice channel!!");
+    }
+	message.channel.sendMessage(":white_check_mark: **Connected!**");
+    voiceChannel.join()
+    .then(connection => {
+	const args = "https://www.youtube.com/watch?v=KoY66lqmcYA";
+	
+      let stream = yt(args, {audioonly: true});
+      yt.getInfo(args, function(err, info) {
+      const title = info.title
+	  message.channel.sendMessage(`Now playing \`${title}\``)
+      })
+      const dispatcher = connection.playStream(stream);
+      dispatcher.on('end', () => {
+         voiceChannel.leave();
+       }).catch(e =>{
+         console.error(e);
+       });
+    })
+	}
+	});
+client.on('message', message => {
+	if (message.author === client.user) return;
+
+	if (message.content.startsWith(prefix + 'topplay 4')) {
+		
+	   	let text = args.slice(1).join(" ");
+		
+		  const voiceChannel = message.member.voiceChannel;
+    	if (!voiceChannel){
+		
+      return message.channel.sendMessage(":x: You are not in a voice channel!!");
+    }
+	message.channel.sendMessage(":white_check_mark: **Connected!**");
+    voiceChannel.join()
+    .then(connection => {
+	const args = "https://www.youtube.com/watch?v=Rnjwd16vpPs";
+	
+      let stream = yt(args, {audioonly: true});
+      yt.getInfo(args, function(err, info) {
+      const title = info.title
+	  message.channel.sendMessage(`Now playing \`${title}\``)
+      })
+      const dispatcher = connection.playStream(stream);
+      dispatcher.on('end', () => {
+         voiceChannel.leave();
+       }).catch(e =>{
+         console.error(e);
+       });
+    })
+	}
+	});
+client.on('message', message => {
+	if (message.author === client.user) return;
+
+	if (message.content.startsWith(prefix + 'topplay 5')) {
+		
+	   	let text = args.slice(1).join(" ");
+		
+		  const voiceChannel = message.member.voiceChannel;
+    	if (!voiceChannel){
+		
+      return message.channel.sendMessage(":x: You are not in a voice channel!!");
+    }
+	message.channel.sendMessage(":white_check_mark: **Connected!**");
+    voiceChannel.join()
+    .then(connection => {
+	const args = "https://www.youtube.com/watch?v=-77UEct0cZM";
 	
       let stream = yt(args, {audioonly: true});
       yt.getInfo(args, function(err, info) {
