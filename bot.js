@@ -4,7 +4,15 @@ const yt = require('ytdl-core');
 const opus = require('node-opus');
 const ffmpeg = require('ffmpeg');
 const playArbitraryFFmpeg = require('discord.js-arbitrary-ffmpeg');
-const Quiz = require('javascript-quiz-using-json');
+
+var configurations = {
+  id: 'SagiriQuiz',                  // the element reference within the DOM
+  dataSource: './Quiz/data.json',       // the json quiz data location
+  randomise: 'false',              // randomise the order of the questions to the user
+  loadingGif: './Quiz/loading.gif', // loading image between rendering
+};
+
+Quiz.init(configurations);
 
 const fs = require("fs");
 
