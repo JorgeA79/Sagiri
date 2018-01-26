@@ -189,7 +189,7 @@ client.on('message', message => {
 client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'hug')) {
-
+  	let member = message.mentions.members.first();
 		
 		var selecthugGif = hugifs[Math.floor(Math.random() * hugifs.length)];
 		  message.channel.send(`**${message.author.username}** hugged **${member.user.username}**`);
