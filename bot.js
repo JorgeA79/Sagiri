@@ -336,9 +336,9 @@ client.on('message', message => {
 });
 client.on('message', message => {
 	if (message.author === client.user) return;
-	if (message.content.startsWith(prefix + 'pokedex')) {
+	if (message.content.startsWith(prefix + 'pokemongif')) {
 		const args = message.content.split(" ").slice(1)
-		pokemonGif(args.join(""));
+		pokemonGif(args);
 		}
 });
 client.on('message', message => {
