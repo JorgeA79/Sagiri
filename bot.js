@@ -176,7 +176,14 @@ client.on('message', message => {
 	}
 		
 });
-	
+//Roleplay
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'hug')) {
+ let member = message.mentions.members.first();
+		
+	}
+});
 //MiniGames
 client.on('message', message => {
 	if (message.author === client.user) return;
@@ -379,7 +386,7 @@ client.on('message', message => {
 client.on('message', message => {
 	if (message.author === client.user) return;
 
-	if (message.content.startsWith(prefix + 'top play ')) {
+	if (message.content.startsWith(prefix + 'top play 1')) {
 	   
 		  const voiceChannel = message.member.voiceChannel;
     	if (!voiceChannel){
