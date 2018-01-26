@@ -76,6 +76,14 @@ var pokefacts = [
 	//Normal Commands
 client.on('message', message => {
 	if (message.author === client.user) return;
+	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
+	if (message.content.startsWith(prefix)) {
+		
+		
+	}
+});
+client.on('message', message => {
+	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'help')) {
 		
 	const embed = new Discord.RichEmbed()
@@ -188,8 +196,9 @@ client.on('message', message => {
 //Roleplay
 client.on('message', message => {
 	if (message.author === client.user) return;
+	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
 	if (message.content.startsWith(prefix + 'hug')) {
-		 if(message.channel.type === 'dm') return message.reply("You cant use me in PM."){
+		
 		
   	let member = message.mentions.members.first();
 		
