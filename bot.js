@@ -458,8 +458,7 @@ client.on('message', message => {
 
 	if (message.content.startsWith(prefix + 'topplay 1')) {
 		
-	   	let text = args.slice(1).join(" ");
-		
+	   	
 		  const voiceChannel = message.member.voiceChannel;
     	if (!voiceChannel){
 		
@@ -489,7 +488,7 @@ client.on('message', message => {
 
 	if (message.content.startsWith(prefix + 'topplay 2')) {
 		
-	   	let text = args.slice(1).join(" ");
+	   
 		
 		  const voiceChannel = message.member.voiceChannel;
     	if (!voiceChannel){
@@ -520,7 +519,6 @@ client.on('message', message => {
 
 	if (message.content.startsWith(prefix + 'topplay 3')) {
 		
-	   	let text = args.slice(1).join(" ");
 		
 		  const voiceChannel = message.member.voiceChannel;
     	if (!voiceChannel){
@@ -551,7 +549,7 @@ client.on('message', message => {
 
 	if (message.content.startsWith(prefix + 'topplay 4')) {
 		
-	   	let text = args.slice(1).join(" ");
+	   	
 		
 		  const voiceChannel = message.member.voiceChannel;
     	if (!voiceChannel){
@@ -582,7 +580,7 @@ client.on('message', message => {
 
 	if (message.content.startsWith(prefix + 'topplay 5')) {
 		
-	   	let text = args.slice(1).join(" ");
+	   
 		
 		  const voiceChannel = message.member.voiceChannel;
     	if (!voiceChannel){
