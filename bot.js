@@ -432,7 +432,7 @@ client.on('message', message => {
 	});
 client.on('message', message => {
 	if (message.author === client.user) return;
-	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
+	 if(message.channel.type === 'dm') return;
 	if (message.content.startsWith(prefix + 'leave')) {
 	
 		  const voiceChannel = message.member.voiceChannel;
