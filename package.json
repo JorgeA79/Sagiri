@@ -15,6 +15,7 @@
     "node-opus": "0.2.7",
     "opusscript": "0.0.6",
     "ffmpeg-binaries": "3.2.2-3",
+    "tinyslacktriviabot": "4.0.0",
     "ytdl-core": "0.19.0"
   }
 }
