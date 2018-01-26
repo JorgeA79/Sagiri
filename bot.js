@@ -402,8 +402,8 @@ client.on('message', message => {
 client.on('message', message => {
 	if (message.author === client.user) return;
 
-	if (message.content.startsWith(prefix + 'top play 1')) {
-	   
+	if (message.content.startsWith(prefix + 'topplay')) {
+	   	let text = args.slice(1).join(" ");
 		  const voiceChannel = message.member.voiceChannel;
     	if (!voiceChannel){
       return message.channel.sendMessage(":x: You are not in a voice channel!!");
@@ -412,7 +412,9 @@ client.on('message', message => {
     voiceChannel.join()
     .then(connection => {
 	const args = "https://www.youtube.com/watch?v=XMXgHfHxKVM";
-	   
+	   if(text == "1"){
+		args = "https://www.youtube.com/watch?v=qpgTC9MDx1o&index=9&list=RDGMEMQ1dJ7wXfLlqCjwV0xfSNbAVMfLexgOxsZu0";   
+	   }
       let stream = yt(args, {audioonly: true});
       yt.getInfo(args, function(err, info) {
       const title = info.title
