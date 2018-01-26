@@ -189,10 +189,10 @@ client.on('message', message => {
 client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'hug')) {
- let text = args.slice(1).join(" ");
+
 		
 		var selecthugGif = hugifs[Math.floor(Math.random() * hugifs.length)];
-		  message.channel.send(`**${message.author.username}** hugged **${text**`);
+		  message.channel.send(`**${message.author.username}** hugged **xd**`);
 		const embed = new Discord.RichEmbed()
 
   .setImage(selecthugGif)
