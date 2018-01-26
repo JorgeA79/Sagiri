@@ -204,7 +204,7 @@ client.on('message', message => {
 //Roleplay
 client.on('message', message => {
 	if (message.author === client.user) return;
-	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
+	 if(message.channel.type === 'dm') return;
 	if (message.content.startsWith(prefix + 'hug')) {
 		
 		
@@ -220,7 +220,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
 	if (message.author === client.user) return;
-	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
+	 if(message.channel.type === 'dm') return;
 	if (message.content.startsWith(prefix + 'slap')) {
 		
 		
@@ -236,7 +236,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
 	if (message.author === client.user) return;
-	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
+	 if(message.channel.type === 'dm') return;
 	if (message.content.startsWith(prefix + 'kill')) {
 		
 		
@@ -391,7 +391,7 @@ experience = userData.points
 //Music System
 client.on('message', message => {
 	if (message.author === client.user) return;
-	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
+	 if(message.channel.type === 'dm') return;
 	if (message.content.startsWith(prefix + 'play')) {
 	
 		  const voiceChannel = message.member.voiceChannel;
@@ -418,7 +418,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
 	if (message.author === client.user) return;
-	 if(message.channel.type === 'dm') return message.reply("You cant use me in PM.");
+	 if(message.channel.type === 'dm') return;
 	if (message.content.startsWith(prefix + 'join')) {
 	
 		  const voiceChannel = message.member.voiceChannel;
