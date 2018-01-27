@@ -277,6 +277,16 @@ client.on('message', message => {
 		console.log(monid.id);
 		console.log(monid.name);
   		console.log(monid.sprites);
+		
+		const embed = new Discord.RichEmbed()
+  .setTitle(monid.name)
+  .setColor(0x7AFFA8) 
+  .setImage(monid.sprites)
+		
+
+  
+
+  message.channel.send({embed});
 	}
 });
 //MiniGames
