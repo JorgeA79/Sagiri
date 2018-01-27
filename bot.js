@@ -266,7 +266,7 @@ client.on('message', message => {
 	if (message.content.startsWith(prefix + 'pokedex')) {
 		
 		
-  	let pokemon = message.mentions.members.first();
+  	  let pokemon = args.slice(1).join(" ");
 		 if(!pokemon) 
 		return message.reply("Try saying the pokemon");
 		
