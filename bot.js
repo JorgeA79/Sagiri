@@ -281,7 +281,7 @@ client.on('message', message => {
 		const embed = new Discord.RichEmbed()
   .setTitle(monid.name)
   .setColor(0x7AFFA8) 
-  .setImage(monid.sprites)
+  .setImage(monid.sprites.animated)
 		
 
   
