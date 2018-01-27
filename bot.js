@@ -276,7 +276,7 @@ client.on('message', message => {
 		
 		console.log(monid.id);
 		console.log(monid.name);
-  		console.log(monid.sprites);
+  		console.log(monid.sprites.animated);
 		
 		const embed = new Discord.RichEmbed()
   .setTitle(monid.name)
