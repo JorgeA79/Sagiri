@@ -270,13 +270,13 @@ client.on('message', message => {
 		
 	
 		
-		console.log( pokedex.pokemon(571) );
+		
 		
 		var monid = pokedex.pokemon(571)
 		
 		console.log(monid.id);
-
-  	
+		console.log(monid.name);
+  		console.log(monid.sprites);
 	}
 });
 //MiniGames
