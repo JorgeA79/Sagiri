@@ -275,7 +275,7 @@ client.on('message', message => {
 		  message.channel.send(`**${member.user.username}** fainted!`);
 
 	}
-});
+}); 
 //MiniGames
 client.on('message', message => {
 	if (message.author === client.user) return;
