@@ -268,7 +268,7 @@ client.on('message', message => {
 	 if(message.channel.type === 'dm') return;
 	if (message.content.startsWith(prefix + 'pokedex')) {
 		
-		console.log( pokedex.pokemon('garbodor') );
+		console.log( pokedex.pokemon('zoroark') );
 console.log( pokedex.pokemon(90) );
   	
 	}
