@@ -4,7 +4,7 @@ const yt = require('ytdl-core');
 const opus = require('node-opus');
 const ffmpeg = require('ffmpeg');
 const playArbitraryFFmpeg = require('discord.js-arbitrary-ffmpeg');
-var pokemon = require('pokemon-picker');
+
 
 
 
@@ -260,22 +260,7 @@ client.on('message', message => {
    message.channel.send({embed});
 	}
 });
-client.on('message', message => {
-	if (message.author === client.user) return;
-	 if(message.channel.type === 'dm') return;
-	if (message.content.startsWith(prefix + 'pokedex')) {
-		
-		
-  	  let pokemon = args.slice(1).join(" ");
-		 if(!pokemon) 
-		return message.reply("Try saying the pokemon");
-		
-		pokemon.byName(pokemon);
-		
-		  message.channel.send(`**${member.user.username}** fainted!`);
 
-	}
-}); 
 //MiniGames
 client.on('message', message => {
 	if (message.author === client.user) return;
