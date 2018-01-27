@@ -278,7 +278,7 @@ client.on('message', message => {
 		return message.reply("Try saying the pokemon");
 		
 		
-		console.log( pokedex.pokemon(dextext) );
+		console.log( pokedex.pokemon(dextext);
 
   	
 	}
