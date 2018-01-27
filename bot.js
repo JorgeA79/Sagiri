@@ -269,6 +269,13 @@ client.on('message', message => {
 	if (message.content.startsWith(prefix + 'pokedex')) {
 		
 		
+		  let dexmon = args.slice(1).join(" ");
+		
+		 if(!dexmon) 
+		return message.reply("Try saying the pokemon");
+		
+		
+		console.log(pokedex.pokemon(dexmon);
 		
 
   	
