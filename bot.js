@@ -271,7 +271,7 @@ client.on('message', message => {
 		
 		
 		  let dexmon = args.slice(1).join(" ");
-		var dextext = (dexmon);
+		var dextext = dexmon;
 		
 		
 		 if(!dexmon) 
