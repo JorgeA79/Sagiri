@@ -5,7 +5,9 @@ const opus = require('node-opus');
 const ffmpeg = require('ffmpeg');
 const playArbitraryFFmpeg = require('discord.js-arbitrary-ffmpeg');
 
-
+var Pokedex = require('pokedex'),
+    pokedex = new Pokedex();
+ 
 
 
 
@@ -261,6 +263,16 @@ client.on('message', message => {
 	}
 });
 
+client.on('message', message => {
+	if (message.author === client.user) return;
+	 if(message.channel.type === 'dm') return;
+	if (message.content.startsWith(prefix + 'pokedex')) {
+		
+		console.log( pokedex.pokemon('garbodor') );
+console.log( pokedex.pokemon(90) );
+  	
+	}
+});
 //MiniGames
 client.on('message', message => {
 	if (message.author === client.user) return;
