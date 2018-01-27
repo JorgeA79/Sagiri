@@ -268,8 +268,13 @@ client.on('message', message => {
 	 if(message.channel.type === 'dm') return;
 	if (message.content.startsWith(prefix + 'pokedex')) {
 		
-		console.log( pokedex.pokemon('zoroark') );
-console.log( pokedex.pokemon(90) );
+		  let dexmon = args.slice(1).join(" ");
+		 if(!dexmon) 
+		return message.reply("Try saying the pokemon");
+		
+		
+		console.log( pokedex.pokemon(dexmon) );
+
   	
 	}
 });
