@@ -271,14 +271,14 @@ client.on('message', message => {
 		
 		
 		  let dexmon = args.slice(1).join(" ");
-		var dextext = dexmon;
+		
 		
 		
 		 if(!dexmon) 
 		return message.reply("Try saying the pokemon");
 		
 		
-		console.log( pokedex.pokemon(dextext);
+		console.log( pokedex.pokemon(dexmon);
 
   	
 	}
