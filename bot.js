@@ -268,16 +268,13 @@ client.on('message', message => {
 	 if(message.channel.type === 'dm') return;
 	if (message.content.startsWith(prefix + 'pokedex')) {
 		
+	
 		
-		  let dexmon = args.slice(1).join(" ");
-		var dextext = dexmon;
+		console.log( pokedex.pokemon(571) );
 		
-		 if(!dexmon) 
-		return message.reply("Try saying the pokemon");
+		var monid = pokedex.pokemon(571)
 		
-		
-		console.log( pokedex.pokemon(dextext) );
-		
+		console.log(monid.id);
 
   	
 	}
