@@ -38,6 +38,7 @@ var hugifs =
 			"http://25.media.tumblr.com/tumblr_ma7l17EWnk1rq65rlo1_500.gif",
 			"http://gifimage.net/wp-content/uploads/2017/01/Anime-hug-GIF-Image-Download-1.gif",
 			"https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif",
+			 "https://78.media.tumblr.com/53f2a11bf83eb0b867fb5a12589a0262/tumblr_o5f1k5Uba11vr3baro3_r1_400.gif",
 			"https://media1.tenor.com/images/42305118566d028969298b0459e90899/tenor.gif?itemid=5941985",
 			"https://media.giphy.com/media/jIZwY2M1Ac8tq/giphy.gif"];
 var slapgifs = 
