@@ -33,13 +33,33 @@ var balance = "0"
 var reputation = "0"
 var experience = "0"
 
+var triviaie = [
+	      "Who wears goggles and a cape?",
+	      "Who is the Soccer Freak Captain?",
+	      "Who is known as the midfield magician?",
+		 "Who is the ace striker's younger sister?",
+		 "Who is Raimon's Dragon shot user?",
+		 "Who is the grandfather of Mamoru?",
+		 "Who is Raimon's fastest player?",
+		 "Who is Raimon's fastest player?",
+	      "Who is Raimon's Ace Striker?"]
+var trivianswersie = [
+	      "KIDOU",
+	      "ENDOU",
+	      "ICHINOSE",
+	"YUUKA",
+	"SOMEOKA",
+	"DAISUKE",
+	"KAZEMARU",
+	"ZEUS",
+		   "GOUENJI"]
 
-var triviaq = ["Appeared in Chrono Stone during the match between El Dorado Team 2 against Giru, one of the hissatsus he has (Penguin the Hand) and his Keshin (Eichi no Ou Bunguou) are also based on a fan-submitted content.",
+var triviadb = [
 	      "What is the name of Goku's wife?",
 	      "Who killed Cell?",
 	      "Of the dragonballs. What is the number of Goku's luck?",
 	      "What is Goku's real name?"]
-var trivianswers = ["MECHA ENDOU",
+var trivianswersdb = [
 	      "MILK",
 	      "GOHAN",
 	      "4",
@@ -309,6 +329,43 @@ client.on('message', message => {
 		var selectkillGif = [Math.floor(Math.random() * triviaq.length)];
         var qsel = triviaq[selectkillGif]
 	 var anssel = trivianswers[selectkillGif]
+        
+		 
+	message.channel.send(qsel + '\`30 seconds to answer, make sure to write all with CAPS\`')
+.then(() => {
+		
+  message.channel.awaitMessages(response => response.content === anssel, {
+    max: 1,
+    time: 30000,
+    errors: ['time'],
+  })
+  .then((collected) => {
+	  const embed = new Discord.RichEmbed()
+
+  .setTitle("You are right")
+
+  .setColor(0x7AFFA8)
+  .setImage("https://media.giphy.com/media/14nU2foG3YIZ2g/giphy.gif")
+
+
+  message.channel.send({embed});
+
+    })
+    .catch(() => {
+      message.channel.send('AWWWW RIP :confused: ');
+    });
+});
+	
+	}
+});
+client.on('message', message => {
+	if (message.author === client.user) return;
+	 if(message.channel.type === 'dm') return;
+	if (message.content.startsWith(prefix + 'trivia ie')) {
+		
+		var selectkillGif = [Math.floor(Math.random() * triviaie.length)];
+        var qsel = triviaie[selectkillGif]
+	 var anssel = trivianswersie[selectkillGif]
         
 		 
 	message.channel.send(qsel + '\`30 seconds to answer, make sure to write all with CAPS\`')
