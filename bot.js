@@ -294,9 +294,9 @@ client.on('message', message => {
 	 if(message.channel.type === 'dm') return;
 	if (message.content.startsWith(prefix + 'collector')) {
 		
-	message.channel.send('Appeared in Chrono Stone during the match between El Dorado Team 2 against Giru, one of the hissatsus he has (Penguin the Hand) and his Keshin (Eichi no Ou Bunguou) are also based on a fan-submitted content. *30 seconds to answer, make sure to write all with CAPS*')
+	message.channel.send('Appeared in Chrono Stone during the match between El Dorado Team 2 against Giru, one of the hissatsus he has (Penguin the Hand) and his Keshin (Eichi no Ou Bunguou) are also based on a fan-submitted content. \`30 seconds to answer, make sure to write all with CAPS\`')
 .then(() => {
-  message.channel.awaitMessages(response => response.content === 'Mecha Endou','mecha endou', {
+  message.channel.awaitMessages(response => response.content === 'MECHA ENDOU', {
     max: 1,
     time: 30000,
     errors: ['time'],
