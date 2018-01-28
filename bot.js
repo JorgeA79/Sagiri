@@ -332,7 +332,7 @@ client.on('message', message => {
 
     })
     .catch(() => {
-      message.channel.send('There was no collected message that passed the filter within the time limit!');
+      message.channel.send('AWWWW RIP :confused: ');
     });
 });
 	
