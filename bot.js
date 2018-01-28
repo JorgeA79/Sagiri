@@ -43,8 +43,6 @@ var triviaie = [
 	      "Who is Raimon's fastest player?",
 	      "Which team is based off the Mythological Gods?",
 	      "Who is Raimon's Ace Striker?",
-	      "Who is the captain of Zeus?",
-	      "Who is the Goalkeeper of Teikoku?,
 	      "Who wears an eye patch and striker of Teikoku?"]
 var trivianswersie = [
 	"KIDOU",
@@ -56,8 +54,6 @@ var trivianswersie = [
 	"KAZEMARU",
 	"ZEUS",
 	"GOUENJI",
-	"APHRODI",
-	"GENDA",
 	"SAKUMA"]
 
 var triviadb = [
