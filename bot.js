@@ -35,13 +35,15 @@ var experience = "0"
 
 
 var triviaq = ["Appeared in Chrono Stone during the match between El Dorado Team 2 against Giru, one of the hissatsus he has (Penguin the Hand) and his Keshin (Eichi no Ou Bunguou) are also based on a fan-submitted content.",
-	      "xd",
-	      "lel",
-	      "oof" ]
+	      "What is the name of Goku's wife?",
+	      "Who killed Cell?",
+	      "Of the dragonballs. What is the number of Goku's luck?",
+	      "What is Goku's real name?"]
 var trivianswers = ["MECHA ENDOU",
-	      "xd",
-	      "lel",
-	      "oof" ]
+	      "MILK",
+	      "GOHAN",
+	      "4",
+		   "KAKARROT"]
 
 var hugifs = 
     			["https://media1.tenor.com/images/b0de026a12e20137a654b5e2e65e2aed/tenor.gif?itemid=7552093",
