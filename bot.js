@@ -296,13 +296,23 @@ client.on('message', message => {
 		
 	message.channel.send('Appeared in Chrono Stone during the match between El Dorado Team 2 against Giru, one of the hissatsus he has (Penguin the Hand) and his Keshin (Eichi no Ou Bunguou) are also based on a fan-submitted content. \`30 seconds to answer, make sure to write all with CAPS\`')
 .then(() => {
+		
   message.channel.awaitMessages(response => response.content === 'MECHA ENDOU', {
     max: 1,
     time: 30000,
     errors: ['time'],
   })
   .then((collected) => {
-      message.channel.send(`The collected message was: ${collected.first().content}`);
+	  const embed = new Discord.RichEmbed()
+
+  .setTitle("You are right")
+
+  .setColor(0x7AFFA8)
+  .setImage("https://media.giphy.com/media/14nU2foG3YIZ2g/giphy.gif")
+
+
+  message.channel.send({embed});
+
     })
     .catch(() => {
       message.channel.send('There was no collected message that passed the filter within the time limit!');
