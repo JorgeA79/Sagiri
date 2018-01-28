@@ -341,9 +341,11 @@ client.on('message', message => {
      if(message.channel.type === 'dm') return;
     if (message.content.startsWith(prefix + 'pokedex')) {
 
+	let mon = args.slice(1).join(" ");
+	    
+        var monid = pokedex.pokemon(mon.join(""))
 
-        var monid = pokedex.pokemon(471)
-
+	
         const embed = new Discord.RichEmbed()
   .setTitle(monid.name)
   .setColor(0x7AFFA8) 
