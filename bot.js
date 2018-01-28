@@ -304,9 +304,7 @@ client.on('message', message => {
 	 if(message.channel.type === 'dm') return;
 	if (message.content.startsWith(prefix + 'collector')) {
 		
-		var selectkillGif = [Math.floor(Math.random() * triviaq.length)];
-		var qsel = triviaq(selectkillGif)
-		message.channel.send(qsel)
+		
 		 
 	message.channel.send('\`30 seconds to answer, make sure to write all with CAPS\`')
 .then(() => {
