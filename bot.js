@@ -343,7 +343,7 @@ client.on('message', message => {
 
 	let mon = args.slice(1).join(" ");
 	    
-        var monid = pokedex.pokemon(mon.join(""))
+        var monid = pokedex.pokemon(471)
 
 	
         const embed = new Discord.RichEmbed()
