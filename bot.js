@@ -336,6 +336,22 @@ client.on('message', message => {
 	
 	}
 });
+client.on('message', message => {
+    if (message.author === client.user) return;
+     if(message.channel.type === 'dm') return;
+    if (message.content.startsWith(prefix + 'pokedex')) {
+
+
+        var monid = pokedex.pokemon(471)
+
+        const embed = new Discord.RichEmbed()
+  .setTitle(monid.name)
+  .setColor(0x7AFFA8) 
+  .setImage(monid.sprites.animated)
+
+  message.channel.send({embed});
+    }
+});
 //MiniGames
 client.on('message', message => {
 	if (message.author === client.user) return;
