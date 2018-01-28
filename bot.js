@@ -35,13 +35,13 @@ var experience = "0"
 
 
 var triviaq = ["Appeared in Chrono Stone during the match between El Dorado Team 2 against Giru, one of the hissatsus he has (Penguin the Hand) and his Keshin (Eichi no Ou Bunguou) are also based on a fan-submitted content.",
-	      "",
-	      "",
-	      "" ]
+	      "xd",
+	      "lel",
+	      "oof" ]
 var trivianswers = ["MECHA ENDOU",
-	      "",
-	      "",
-	      "" ]
+	      "xd",
+	      "lel",
+	      "oof" ]
 
 var hugifs = 
     			["https://media1.tenor.com/images/b0de026a12e20137a654b5e2e65e2aed/tenor.gif?itemid=7552093",
@@ -305,9 +305,9 @@ client.on('message', message => {
 	if (message.content.startsWith(prefix + 'collector')) {
 		
 		var selectkillGif = [Math.floor(Math.random() * triviaq.length)];
-		
-		message.channel.send(selectkillGif)
-		
+		var qsel = triviaq(selectkillGif)
+		message.channel.send(qsel)
+		 
 	message.channel.send('\`30 seconds to answer, make sure to write all with CAPS\`')
 .then(() => {
 		
