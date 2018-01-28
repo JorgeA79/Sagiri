@@ -323,43 +323,7 @@ client.on('message', message => {
   message.channel.send({embed});
 	}
 });
-client.on('message', message => {
-	if (message.author === client.user) return;
-	 if(message.channel.type === 'dm') return;
-	if (message.content.startsWith(prefix + 'collector')) {
-		
-		var selecttriviaxd = [Math.floor(Math.random() * triviaq.length)];
-        var qsel = triviaq[selecttriviaxd]
-	 var anssel = trivianswers[selecttriviaxd]
-        
-		 
-	message.channel.send(qsel + '\`30 seconds to answer, make sure to write all with CAPS\`')
-.then(() => {
-		
-  message.channel.awaitMessages(response => response.content === anssel, {
-    max: 1,
-    time: 30000,
-    errors: ['time'],
-  })
-  .then((collected) => {
-	  const embed = new Discord.RichEmbed()
 
-  .setTitle("You are right")
-
-  .setColor(0x7AFFA8)
-  .setImage("https://media.giphy.com/media/14nU2foG3YIZ2g/giphy.gif")
-
-
-  message.channel.send({embed});
-
-    })
-    .catch(() => {
-      message.channel.send('AWWWW RIP :confused: ');
-    });
-});
-	
-	}
-});
 client.on('message', message => {
 	if (message.author === client.user) return;
 	 if(message.channel.type === 'dm') return;
