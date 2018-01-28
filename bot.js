@@ -11,7 +11,7 @@ var Pokedex = require('pokedex'),
 
 
 
-const fs = require("fs");
+const fs = require("fs"); 
 
 
 let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
