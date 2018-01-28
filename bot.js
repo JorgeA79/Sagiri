@@ -301,24 +301,14 @@ client.on('message', message => {
 	if (message.author === client.user) return;
 	 if(message.channel.type === 'dm') return;
 	if (message.content.startsWith(prefix + 'pokedex')) {
+				
 		
-	
-		
-		
-		
-		var mon = pokedex.pokemon(571)
-		
-		console.log(monid.id);
-		console.log(monid.name);
-  		console.log(monid.sprites.animated);
+		var mon = pokedex.pokemon(471)
 		
 		const embed = new Discord.RichEmbed()
   .setTitle(monid.name)
   .setColor(0x7AFFA8) 
   .setImage(monid.sprites.animated)
-		
-
-  
 
   message.channel.send({embed});
 	}
