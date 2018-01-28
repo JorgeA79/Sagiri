@@ -37,23 +37,28 @@ var triviaie = [
 	      "Who wears goggles and a cape?",
 	      "Who is the Soccer Freak Captain?",
 	      "Who is known as the midfield magician?",
-		 "Who is the ace striker's younger sister?",
-		 "Who is Raimon's Dragon shot user?",
-		 "Who is the grandfather of Mamoru?",
-		 "Who is Raimon's fastest player?",
-		 "Which team is based off the Mythological Gods?",
-	      "Who is Raimon's Ace Striker?"]
+	      "Who is the ace striker's younger sister?",
+	      "Who is Raimon's Dragon shot user?",
+	      "Who is the grandfather of Mamoru?",
+	      "Who is Raimon's fastest player?",
+	      "Which team is based off the Mythological Gods?",
+	      "Who is Raimon's Ace Striker?",
+	      "Who is the captain of Zeus?",
+	      "Who is the Goalkeeper of Teikoku?,
+	      "Who wears an eye patch and striker of Teikoku?"]
 var trivianswersie = [
-	      "KIDOU",
-	      "ENDOU",
-	      "ICHINOSE",
+	"KIDOU",
+	"ENDOU",
+	"ICHINOSE",
 	"YUUKA",
 	"SOMEOKA",
 	"DAISUKE",
 	"KAZEMARU",
 	"ZEUS",
-	
-		   "GOUENJI"]
+	"GOUENJI",
+	"APHRODI",
+	"GENDA",
+	"SAKUMA"]
 
 var triviadb = [
 	      "What is the name of Goku's wife?",
