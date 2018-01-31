@@ -346,8 +346,9 @@ client.on('message', message => {
 	    
         var monid = pokedex.pokemon(mon)
 
-		 if(!monid) 
+		 if(!monid) {
 		return message.reply("Thats not a mon");
+		 }
 	    
         const embed = new Discord.RichEmbed()
   .setTitle(monid.name)
