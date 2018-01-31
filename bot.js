@@ -345,16 +345,14 @@ client.on('message', message => {
 	
 	  let mon = args;    
 	    
-        var monid = pokedex.pokemon(mon)
-
-		 if(!monid) {
-		return message.reply("Thats not a mon");
-		 }
+     var monid = pokemon.byName(mon);
+	    
 	    
         const embed = new Discord.RichEmbed()
   .setTitle(monid.name)
   .setColor(0x7AFFA8) 
-  .setImage(monid.sprites.animated)
+ 
+  .addField(monid.types,true)
 
 	
   message.channel.send({embed});
