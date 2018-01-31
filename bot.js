@@ -7,7 +7,8 @@ const playArbitraryFFmpeg = require('discord.js-arbitrary-ffmpeg');
 
 var Pokedex = require('pokedex'),
     pokedex = new Pokedex();
- 
+
+ var pokemon = require('pokemon-picker');
 
 const fs = require("fs"); 
 
