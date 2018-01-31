@@ -342,7 +342,7 @@ client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 	
-	  let mon = args.slice(1);    
+	  let mon = args;    
 	    
         var monid = pokedex.pokemon(mon)
 
