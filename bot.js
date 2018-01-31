@@ -335,29 +335,7 @@ client.on('message', message => {
 	
 	}
 });
-client.on('message', message => {
-    if (message.author === client.user) return;
-     if(message.channel.type === 'dm') return;
-    if (message.content.startsWith(prefix + 'pokedex')) {
 
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-	
-	  let mon = args;    
-	    
-     var monid = pokemon.byName(mon);
-	    
-	    
-        const embed = new Discord.RichEmbed()
-  .setTitle(monid.name)
-  .setColor(0x7AFFA8) 
- 
-  .addField(monid.types,true)
-
-	
-  message.channel.send({embed});
-    }
-});
 //MiniGames
 client.on('message', message => {
 	if (message.author === client.user) return;
