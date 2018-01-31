@@ -9,8 +9,6 @@ var Pokedex = require('pokedex'),
     pokedex = new Pokedex();
  
 
-
-
 const fs = require("fs"); 
 
 
@@ -341,9 +339,12 @@ client.on('message', message => {
      if(message.channel.type === 'dm') return;
     if (message.content.startsWith(prefix + 'pokedex')) {
 
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
 	
+	  let mon = args.slice(1).join(" ");    
 	    
-        var monid = pokedex.pokemon(471)
+        var monid = pokedex.pokemon(mon)
 
 	
         const embed = new Discord.RichEmbed()
