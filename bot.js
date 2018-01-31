@@ -346,12 +346,15 @@ client.on('message', message => {
 	    
         var monid = pokedex.pokemon(mon)
 
-	
+		 if(!monid) 
+		return message.reply("Thats not a mon");
+	    
         const embed = new Discord.RichEmbed()
   .setTitle(monid.name)
   .setColor(0x7AFFA8) 
   .setImage(monid.sprites.animated)
 
+	
   message.channel.send({embed});
     }
 });
