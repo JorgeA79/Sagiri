@@ -464,7 +464,7 @@ experience = userData.points
 
   if (message.content.startsWith(prefix + "level")) {
     message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
-	  
+	   fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error); 
   }
 	
   fs.writeFile("./points.json", JSON.stringify(points), (err) => {
