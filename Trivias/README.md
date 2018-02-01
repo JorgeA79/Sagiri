@@ -1,2 +1,0 @@
-# Powai
-Discord bot
