@@ -1,5 +1,12 @@
 {
-"dex4": {
+  "forshadic": {
+"name": "Forshadic",
+"description": "This Pokemon loves to play and make stuff out of snow, it uses it's psychic abilities to attack any trespassers who try to harm them and will do anything to protect it's trainer.",
+"image": "https://cdn.discordapp.com/attachments/372491249221107714/380474283324866561/unknown.png",
+"types": "Psychic/Ice."
+},
+  
+"kascal": {
 "name": "Kascal",
 "description": "The Thief Pokemon, this is one of the cutest pokemon in the mirren region and it uses it's cuteness to decieve people and steal. it is known to steal items, money and sometimes even trainer cards! and it sometimes even steals from its own trainer!",
 "image": "https://cdn.discordapp.com/attachments/372491249221107714/380477611618467852/unknown.png",
