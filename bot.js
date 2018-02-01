@@ -14,7 +14,7 @@ const fs = require("fs");
 
 
 let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
-
+let mirrendex = JSON.parse(fs.readFileSync("./MirrenDex/Mirren.json", "utf8"));
 //Xp system
 
 
@@ -335,7 +335,31 @@ client.on('message', message => {
 	
 	}
 });
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'pokedex')) {
+	
+		
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
 
+      let mon = args;
+		
+		var dexmon = mirrendex("kascal")
+		
+		const embed = new Discord.RichEmbed()
+  .setTitle(dexmon.name)
+
+  .setColor(0x7401DF)
+  .setDescription(dexmon.description)
+  .setImage(dexmon.image)
+.addField("Types:",
+    dexmon.types)
+
+  .setTimestamp()
+  message.channel.send({embed});
+	}
+});
 //MiniGames
 client.on('message', message => {
 	if (message.author === client.user) return;
