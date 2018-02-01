@@ -31,7 +31,7 @@ var nextlevel = "0"
 var balance = "0"
 var reputation = "0"
 var experience = "0"
-
+ 
 var triviaie = [
 	      "Who wears goggles and a cape?",
 	      "Who is the Soccer Freak Captain?",
