@@ -345,7 +345,7 @@ client.on('message', message => {
 
       let mon = args;
 		
-		var dexmon = mirrendex.(args);
+		var dexmon = mirrendex(args);
 		
 		const embed = new Discord.RichEmbed()
   .setTitle(dexmon.name)
