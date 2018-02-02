@@ -142,7 +142,7 @@ client.on('message', message => {
 .setThumbnail("https://cdn.discordapp.com/attachments/405118984451653633/405149226604167179/91380.png")
 
   .addField("Main Commands",
-    "\`help\`,\`ping\`,\`invite\`,\`server\`,\`profile\`,\`level\`")
+    "\`help\`,\`ping\`,\`invite\`,\`server\`,\`machmirror\`,\`profile\`,\`level\`")
 
   .addField("Fun Commands", "\`8ball\`, \`flip\` \`head\` or \`tail\`")
   .addField("Anime Commands", "\`fact pokemon\`, \`fact db\`")
@@ -206,6 +206,32 @@ client.on('message', message => {
    */
   .setTimestamp()
   .setURL("https://discord.gg/SguFDuw")
+  
+
+  message.channel.send({embed});
+		
+		 
+	}
+		
+});
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'server')) {
+
+		const embed = new Discord.RichEmbed()
+  .setTitle("> Click to join Mach Mirror server <")
+  .setAuthor("Sagiri", "https://cdn.discordapp.com/attachments/405118984451653633/405149148002648065/DEUtpOVWsAEzzri.png")
+  /*
+   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+   */
+  .setColor(0x7AFFA8) 
+  
+  .setThumbnail("https://cdn.discordapp.com/attachments/405118984451653633/405149226604167179/91380.png")
+  /*
+   * Takes a Date object, defaults to current date.
+   */
+  .setTimestamp()
+  .setURL("https://discord.gg/98XKyK5")
   
 
   message.channel.send({embed});
