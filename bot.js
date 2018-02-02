@@ -389,6 +389,43 @@ client.on('message', message => {
 });
 client.on('message', message => {
 	if (message.author === client.user) return;
+	 if(message.channel.type === 'dm') return;
+	if (message.content.startsWith(prefix + 'trivia db')) {
+		
+		var selectkilldb = [Math.floor(Math.random() * triviadb.length)];
+        var qselx = triviadb[selectkilldb]
+	 var ansselx = trivianswersdb[selectkilldb]
+        
+		 
+	message.channel.send(qselx + '\`30 seconds to answer, make sure to write all with CAPS\`')
+.then(() => {
+		
+  message.channel.awaitMessages(response => response.content === ansselx, {
+    max: 1,
+    time: 30000,
+    errors: ['time'],
+  })
+  .then((collected) => {
+	  const embed = new Discord.RichEmbed()
+
+  .setTitle("You are right")
+
+  .setColor(0x7AFFA8)
+  .setImage("https://media.giphy.com/media/14nU2foG3YIZ2g/giphy.gif")
+
+
+  message.channel.send({embed});
+
+    })
+    .catch(() => {
+      message.channel.send('AWWWW RIP :confused: ');
+    });
+});
+	
+	}
+});
+client.on('message', message => {
+	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'pokedex')) {
 	
 		
