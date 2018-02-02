@@ -448,55 +448,6 @@ client.on('message', message => {
 		message.channel.send(dbsfactAnswer);
 		}
 });
-//Level System
-client.on("message", message => {
-
-  if (message.author.bot) return;
-
-  if (!points[message.author.id]) points[message.author.id] = {
-    points: 0,
-    level: 0
-  };
-  let userData = points[message.author.id];
-  userData.points++;
-  var totalxp = 0;
-  var curLevel = 0;
-	
-	levelsequ = (32*(userData.level)+32);
-	nextlevel = userData.level + 1;
-	
-  if (curLevel > userData.level) {
-    
-    userData.level = curLevel;
- 
-	  message.channel.send(`You"ve leveled up to level **${curLevel}**! Ain"t that dandy?`);
-  }
-	if(userData.points ==  (32*(userData.level)+32)){
-	 userData.level =  userData.level + 1;
-		userData.points++;
-		
-	levelsequ = (32*(userData.level)+32);
-	nextlevel = userData.level + 1;
-		
-	 message.channel.send(message.author.toString() + `, You"ve leveled up to level **${userData.level}**! Ayy you are growing <:smug_maeve:405166781976674304>`);	
-	
-}
-	
-levels = userData.level
-experience = userData.points
-	
-
-  if (message.content.startsWith(prefix + "level")) {
-    message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
-	   fs.writeFile("./points.json", JSON.stringify(points), (err) => console.error); 
-  }
-	
-  fs.writeFile("./points.json", JSON.stringify(points), (err) => {
-    if (err) console.error(err)
-  });
-
-});
-
 
 //Music System
 client.on('message', message => {
