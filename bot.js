@@ -61,7 +61,7 @@ var triviadb = [
 	      "Of the dragonballs. What is the number of Goku's luck?",
 	      "What is Goku's real name?"]
 var trivianswersdb = [
-	      "MILK",
+	      "CHI-CHI",
 	      "GOHAN",
 	      "4",
 		   "KAKARROT"]
