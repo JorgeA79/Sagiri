@@ -123,7 +123,7 @@ var dbsfacts = [
   "Did you know that Goku's mother is a Saiyan known as Gine."
 ]
 var hentai = [
- "https://danbooru.donmai.us/data/__original_drawn_by_mike_inel__f92c3b06d6d89b0dda866cdad4a49edf.gif"
+ "https://danbooru.donmai.us/data/__original_drawn_by_mike_inel__f92c3b06d6d89b0dda866cdad4a49edf.gif",
 	"https://files.yande.re/image/bdb701e0daea5e54a6cfd98b06102efb/yande.re%20432843%20bondage%20breast_hold%20fate_grand_order%20mash_kyrielight%20naked%20nipples%20pussy_juice%20remana%20tentacles%20vibrator.jpg",
 	"https://konachan.com/image/ca216778f744b40204e3e0fcb514f57e/Konachan.com%20-%20260111%20anal%20anus%20aqua_eyes%20aqua_hair%20ass%20ass_grab%20bed%20bell%20bow%20breasts%20censored%20maid%20nipples%20no_bra%20panties%20pussy%20sayika%20short_hair%20underwear%20vibrator.jpg"
 ]
