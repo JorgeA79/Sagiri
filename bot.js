@@ -11,7 +11,7 @@ var Pokedex = require('pokedex'),
  var pokemon = require('pokemon-picker');
 
 const fs = require("fs"); 
-
+ 
 
 let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
 let mirrendex = JSON.parse(fs.readFileSync("./MirrenDex/Mirren.json", "utf8"));
