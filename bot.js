@@ -530,12 +530,7 @@ client.on('message', message => {
 		message.channel.send(pokefactAnswer);
 		}
 });
-client.on('message', message => {
-	if (message.author === client.user) return;
-	if (message.content.startsWith(prefix + 'oof')) {
-		message.channel.send("oof");
-		}
-});
+
 client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'fact db')) {
