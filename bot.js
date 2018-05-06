@@ -294,6 +294,29 @@ client.on('message', message => {
 	}
 		
 });
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'owner')) {
+
+		var username = "Jorge Adolfo"
+		var avatar = "https://images-ext-2.discordapp.net/external/vrmeI46AdqoR6yCfE7lDXdVU5gDncIV8hoUlsCMuSNA/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/304357538101723137/a03381810e96e24541b768e812c55ed0.png?width=100&height=100"
+		const embed = new Discord.RichEmbed()
+
+  .setAuthor(username, avatar)
+  .setColor(0x7AFFA8)
+  
+  .setThumbnail(avatar)
+
+
+
+  .addField("Ur god")")
+	
+  message.channel.send({embed});
+		
+		 
+	}
+		
+});
 //Roleplay
 client.on('message', message => {
 	if (message.author === client.user) return;
