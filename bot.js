@@ -112,6 +112,11 @@ var answers =
 			"My sources say no",
 			"Outlook not so good",
 			"Very doubtful"];
+var facts= [
+  
+ 
+  "Did you know that Duo is a truly god"
+]
 var dbsfacts = [
   
  
@@ -531,7 +536,13 @@ client.on('message', message => {
 		message.channel.send(pokefactAnswer);
 		}
 });
-
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'fact')) {
+		var pokefactAnswer = facts[Math.floor(Math.random() * facts.length)];
+		message.channel.send(pokefactAnswer);
+		}
+});
 client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'fact db')) {
