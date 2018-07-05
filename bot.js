@@ -67,15 +67,7 @@ var trivianswersdb = [
 		   "KAKARROT"]
 
 var hugifs = 
-    			["https://media1.tenor.com/images/b0de026a12e20137a654b5e2e65e2aed/tenor.gif?itemid=7552093",
-			"https://media2.giphy.com/media/143v0Z4767T15e/giphy.gif",
-			"https://media1.tenor.com/images/506aa95bbb0a71351bcaa753eaa2a45c/tenor.gif?itemid=7552075",
-			"http://25.media.tumblr.com/tumblr_ma7l17EWnk1rq65rlo1_500.gif",
-			"http://gifimage.net/wp-content/uploads/2017/01/Anime-hug-GIF-Image-Download-1.gif",
-			"https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif",
-			 "https://78.media.tumblr.com/53f2a11bf83eb0b867fb5a12589a0262/tumblr_o5f1k5Uba11vr3baro3_r1_400.gif",
-			"https://media1.tenor.com/images/42305118566d028969298b0459e90899/tenor.gif?itemid=5941985",
-			"https://media.giphy.com/media/jIZwY2M1Ac8tq/giphy.gif"];
+    			["https://www.google.com.mx/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi-4Nmoh4fcAhWDyIMKHQ7eD_8QjRx6BAgBEAU&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fanime-hug-gifs&psig=AOvVaw1N9HdmE7mEM4SSNurTEmPC&ust=1530849060396916"];
 var slapgifs = 
     			["https://vignette.wikia.nocookie.net/adventuretimewithfinnandjake/images/c/cd/Slap.gif.gif/revision/latest?cb=20130131011837",
 			"https://media1.tenor.com/images/85722c3e51d390e11a0493696f32fb69/tenor.gif?itemid=5463215",
