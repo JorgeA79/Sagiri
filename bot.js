@@ -113,9 +113,8 @@ var answers =
 			"Outlook not so good",
 			"Very doubtful"];
 var facts= [
-  
- 
-  "Did you know that Duo is a truly god"
+   "Did you know that Duo is a god",
+  "Did you know that Duo is a god"
 ]
 var dbsfacts = [
   
@@ -539,8 +538,8 @@ client.on('message', message => {
 client.on('message', message => {
 	if (message.author === client.user) return;
 	if (message.content.startsWith(prefix + 'fact')) {
-		var pokefactAnswer = facts[Math.floor(Math.random() * facts.length)];
-		message.channel.send(pokefactAnswer);
+		var factAnswer = facts[Math.floor(Math.random() * facts.length)];
+		message.channel.send(factAnswer);
 		}
 });
 client.on('message', message => {
