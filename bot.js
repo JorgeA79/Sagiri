@@ -105,9 +105,7 @@ var answers =
 			"Outlook not so good",
 			"Very doubtful"];
 var facts= [
-   "Did you know that Duo is a god",
-	"Did you know that Jorge's dick is so large that people have suspected that is the great wall of China",
-  "Did you know that satan does not even reach Alex's feet?"
+   "xd"
 ]
 var dbsfacts = [
   
