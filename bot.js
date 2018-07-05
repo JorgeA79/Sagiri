@@ -106,7 +106,7 @@ var answers =
 			"Very doubtful"];
 var facts= [
    "Did you know that Duo is a god",
-  "Did you know that Duo is a god"
+  "Did you know that satan does not even reach Alex's feet?"
 ]
 var dbsfacts = [
   
