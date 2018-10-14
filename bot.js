@@ -446,6 +446,13 @@ client.on('message', message => {
   message.channel.send({embed});
 	}
 });
+client.on('message', message => {
+	if (message.author === client.user) return;
+	if (message.content.startsWith(prefix + 'puto')) {
+	
+		message.channel.send('elnelson');
+  
+});
 //MiniGames
 client.on('message', message => {
 	if (message.author === client.user) return;
