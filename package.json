@@ -7,7 +7,7 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "discord.js": "11.1.0",
+    "discord.js": "11.4.2",
     "request": "2.81.0",
     "youtube-search": "1.0.10",
     "ffmpeg": "0.0.4",
