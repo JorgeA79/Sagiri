@@ -548,6 +548,7 @@ client.on('message', message => {
 		}
 });
 
+	
 //Music System
 client.on('message', message => {
 	if (message.author === client.user) return;
